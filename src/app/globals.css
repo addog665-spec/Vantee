@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #0b0b0b;
+  --color-ink: #141414;
+  --color-graphite: #2e2e2c;
+  --color-smoke: #9a9892;
+  --color-bone: #f3f1ec;
+  --color-ivory: #e7e2d9;
+  --color-champagne: #b69c6a;
+  --color-bronze: #78684a;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+:root {
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --header-h: 4.5rem;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--color-obsidian);
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+}
+
+body {
+  background: var(--color-obsidian);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  margin: 0;
+  min-width: 320px;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+::selection { background: var(--color-champagne); color: var(--color-obsidian); }
+
+:focus-visible { outline: 2px solid var(--color-champagne); outline-offset: 3px; }
+
+.page-frame { margin: 0 auto; max-width: 1520px; padding-inline: clamp(1rem, 4vw, 4.5rem); }
+.page-section { padding-block: clamp(4.5rem, 10vw, 10rem); }
+
+.eyebrow {
+  color: var(--color-champagne);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.on-light .eyebrow { color: var(--color-bronze); }
+
+.display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+
+.btn {
+  align-items: center;
+  border: 1px solid currentColor;
+  display: inline-flex;
+  font-size: 0.68rem;
+  font-weight: 700;
+  gap: 0.6rem;
+  justify-content: center;
+  letter-spacing: 0.14em;
+  min-height: 2.9rem;
+  padding: 0 1.4rem;
+  text-transform: uppercase;
+  transition: background 0.3s var(--ease-out), color 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+}
+.btn:hover { background: var(--color-bone); border-color: var(--color-bone); color: var(--color-obsidian); }
+.btn-solid { background: var(--color-bone); border-color: var(--color-bone); color: var(--color-obsidian); }
+.btn-solid:hover { background: var(--color-champagne); border-color: var(--color-champagne); }
+.btn:disabled { cursor: not-allowed; opacity: 0.45; }
+
+.link-line {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding-bottom: 0.35rem;
+  text-transform: uppercase;
+  transition: background-size 0.4s var(--ease-out);
+}
+.link-line:hover { background-size: 40% 1px; }
+
+.field {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgb(243 241 236 / 0.3);
+  color: inherit;
+  padding: 0.85rem 0;
+  width: 100%;
+}
+.field::placeholder { color: rgb(243 241 236 / 0.45); }
+.field:focus { border-color: var(--color-champagne); outline: none; }
+
+.grain::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  content: "";
+  inset: 0;
+  mix-blend-mode: overlay;
+  opacity: 0.12;
+  pointer-events: none;
+  position: absolute;
+}
+
+/* Scroll reveal: content is visible by default and only animates once JS marks it ready. */
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(1.75rem);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+}
+.reveal-ready [data-reveal].is-visible { opacity: 1; transform: none; }
+
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+details[open] .summary-icon { transform: rotate(45deg); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .reveal-ready [data-reveal] { opacity: 1; transform: none; }
+}
