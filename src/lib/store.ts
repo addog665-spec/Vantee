@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { getProduct } from "@/lib/catalog";
 
 export type BagLine = { slug: string; size: string; qty: number };
 
@@ -20,7 +21,10 @@ function load() {
     const raw = window.localStorage.getItem(KEY);
     if (raw) {
       const parsed = JSON.parse(raw) as Partial<State>;
-      state = { bag: Array.isArray(parsed.bag) ? parsed.bag : [], wishlist: Array.isArray(parsed.wishlist) ? parsed.wishlist : [] };
+      // Drop pieces that are no longer in the catalog so the bag count and checkout match what is shown.
+      const bag = (Array.isArray(parsed.bag) ? parsed.bag : []).filter((l) => getProduct(l.slug)?.sizes.includes(l.size));
+      const wishlist = (Array.isArray(parsed.wishlist) ? parsed.wishlist : []).filter((slug) => getProduct(slug));
+      state = { bag, wishlist };
     }
   } catch {
     state = empty;

@@ -21,7 +21,7 @@ export default function AccountPage() {
         title="A more personal house."
         intro="Your bag and wishlist are saved on this device. Customer accounts are coming soon."
         image="/images/official/products/duffel-01.jpg"
-        imageAlt="VANTE campaign image of a black polo and leather duffel"
+        imageAlt="The black Once Upon a Time Jersey with the Weekend Duffel"
       />
       <section className="bg-obsidian py-20">
         <div className="page-frame grid gap-5 md:grid-cols-3">

@@ -1,8 +1,19 @@
 import type { NextConfig } from "next";
+import { retiredProductSlugs } from "./src/lib/catalog";
 
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
+  },
+  async redirects() {
+    return [
+      ...Object.entries(retiredProductSlugs).map(([from, to]) => ({
+        source: `/products/${from}`,
+        destination: `/products/${to}`,
+        permanent: true,
+      })),
+      { source: "/journal/anatomy-of-a-coat", destination: "/journal/anatomy-of-a-jersey", permanent: true },
+    ];
   },
   async headers() {
     return [

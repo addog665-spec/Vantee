@@ -4,14 +4,14 @@ import { PageHero } from "@/components/page-hero";
 
 export const metadata: Metadata = {
   title: "Materials & Craft",
-  description: "We choose fewer materials, then learn them deeply: Italian wool, organic cotton, and the time to make them well.",
+  description: "We choose fewer materials, then learn them deeply: soft jersey, washed denim, and the time to make them well.",
   alternates: { canonical: "/materials" },
 };
 
 const materials = [
-  { title: "Wool", text: "Sourced from storied Italian mills for depth, resilience, and a restrained hand.", image: "/images/official/products/duffel-03.jpg", alt: "Wool detail" },
-  { title: "Cotton", text: "Fine organic poplin and jersey, selected for how they settle against the body.", image: "/images/official/editorial/editorial-staircase-02.jpg", alt: "Cotton detail" },
-  { title: "Time", text: "Small-run production makes room for careful hands and less unnecessary waste.", image: "/images/official/campaign/campaign-story-01.jpg", alt: "Time detail" },
+  { title: "Jersey", text: "A smooth, easy knit cut for movement, finished with a contrast collar and fine piping.", image: "/images/official/editorial/editorial-red-02.jpg", alt: "The burgundy Crest Jersey up close" },
+  { title: "Denim", text: "Washed for a soft hand and a lived-in tone, then marked with our own red motif.", image: "/images/official/editorial/editorial-architecture-02.jpg", alt: "The Motif Denim Short and its red motif" },
+  { title: "Time", text: "Small-run production makes room for careful hands and less unnecessary waste.", image: "/images/official/campaign/campaign-story-01.jpg", alt: "VANTE campaign at the breakwater" },
 ];
 
 export default function MaterialsPage() {
@@ -22,7 +22,7 @@ export default function MaterialsPage() {
         title="The detail is the design."
         intro="We choose fewer materials, then learn them deeply."
         image="/images/official/products/duffel-01.jpg"
-        imageAlt="VANTE campaign image of a black polo and leather duffel"
+        imageAlt="The black Once Upon a Time Jersey with the Weekend Duffel"
       />
       <section className="on-light bg-ivory py-20 text-ink sm:py-28">
         <div className="page-frame space-y-20 sm:space-y-28">

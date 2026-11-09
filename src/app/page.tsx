@@ -106,14 +106,14 @@ export default function Home() {
       {/* Materials */}
       <section className="grid bg-[#161614] md:grid-cols-2">
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[90svh]">
-          <Image src="/images/official/products/duffel-04.jpg" alt="VANTE leather duffel in the launch campaign" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <Image src="/images/official/products/duffel-04.jpg" alt="The Weekend Duffel carried with the Once Upon a Time Jersey" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
         </div>
         <div className="flex items-center px-[clamp(1.25rem,6vw,7rem)] py-20" data-reveal>
           <div>
             <p className="eyebrow">Made to keep</p>
             <h2 className="display mt-6 max-w-md text-[clamp(2.8rem,6vw,6rem)]">Material carries memory.</h2>
             <p className="mt-7 max-w-md text-sm leading-7 text-bone/65">
-              We start with materials that reward proximity: traceable wool, considered cotton, and textures designed to age with grace.
+              We start with materials that reward proximity: soft jersey, washed denim, and textures designed to age with grace.
             </p>
             <Link href="/materials" className="link-line mt-9 inline-block">Our materials</Link>
           </div>

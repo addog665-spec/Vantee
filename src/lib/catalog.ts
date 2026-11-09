@@ -25,83 +25,105 @@ export type Collection = {
 };
 
 export const collections: Collection[] = [
-  { slug: "chapter-01", name: "Chapter 01", tagline: "A study in tailored form.", image: "/images/official/campaign/campaign-harbor-01.jpg", imageAlt: "VANTE Chapter 01 campaign at the harbor" },
+  { slug: "chapter-01", name: "Chapter 01", tagline: "Where the story begins.", image: "/images/official/campaign/campaign-harbor-01.jpg", imageAlt: "VANTE Chapter 01 campaign at the harbor" },
   { slug: "essentials", name: "Essentials", tagline: "The pieces you reach for first.", image: "/images/official/campaign/campaign-harbor-03.jpg", imageAlt: "VANTE Essentials campaign at the harbor" },
   { slug: "after-dark", name: "After Dark", tagline: "A considered evening uniform.", image: "/images/official/hero/hero-secondary.jpg", imageAlt: "VANTE campaign portrait at the red mailboxes" },
 ];
 
-const gallery = (name: string, first: { src: string; alt: string }) => [
-  first,
-  ...["duffel-01", "duffel-02", "duffel-03", "duffel-04"]
-    .map((file) => `/images/official/products/${file}.jpg`)
-    .filter((src) => src !== first.src)
-    .map((src, i) => ({ src, alt: `${name}, view ${i + 2}` })),
-];
+const photo = (file: string) => `/images/official/${file}.jpg`;
 
 export const products: Product[] = [
   {
     id: "v-01",
-    slug: "object-001-coat",
-    name: "Object 001 Coat",
+    slug: "once-upon-a-time-jersey",
+    name: "Once Upon a Time Jersey",
     collection: "chapter-01",
-    price: 890,
+    price: 140,
     color: "Black",
     colorHex: "#111111",
-    images: gallery("Object 001 Coat", { src: "/images/official/products/duffel-01.jpg", alt: "VANTE campaign image of a black polo and leather duffel" }),
-    description: "A precisely cut wool coat with a softened shoulder and a long, uninterrupted line.",
-    details: ["Italian wool shell", "Cupro half lining", "Two internal pockets", "Made in Portugal"],
+    images: [
+      { src: photo("products/duffel-01"), alt: "Once Upon a Time Jersey in black, worn with light-wash denim" },
+      { src: photo("products/duffel-04"), alt: "Back of the Once Upon a Time Jersey showing the script graphic" },
+      { src: photo("editorial/editorial-architecture-01"), alt: "Once Upon a Time Jersey worn beneath a street sign" },
+      { src: photo("editorial/editorial-staircase-02"), alt: "Once Upon a Time Jersey worn on a stairwell" },
+    ],
+    description: "Our signature jersey in black, with a crisp white collar and the story that started VANTE written across the back.",
+    details: ["Contrast white collar", "White piping at the sleeves", "VANTE crest at the chest", "“Once upon a time” script graphic on the back"],
     sizes: ["XS", "S", "M", "L", "XL"],
     inStock: true,
     edition: "Limited run",
   },
   {
     id: "v-02",
-    slug: "sable-knit",
-    name: "Sable Knit",
-    collection: "essentials",
-    price: 320,
-    color: "Stone",
-    colorHex: "#a69f92",
-    images: gallery("Sable Knit", { src: "/images/official/products/duffel-02.jpg", alt: "VANTE campaign image of a leather duffel at a vehicle" }),
-    description: "A compact merino layer designed for a quiet, lived-in silhouette.",
-    details: ["Extra-fine merino", "Fully fashioned seams", "Sourced in Italy", "Made in Portugal"],
-    sizes: ["XS", "S", "M", "L"],
+    slug: "crest-jersey-burgundy",
+    name: "Crest Jersey",
+    collection: "chapter-01",
+    price: 140,
+    color: "Burgundy",
+    colorHex: "#6b1f2a",
+    images: [
+      { src: photo("editorial/editorial-red-02"), alt: "Crest Jersey in burgundy, seated against the red mailboxes" },
+      { src: photo("backgrounds/campaign-boat-02"), alt: "Crest Jersey in burgundy at the harbor" },
+      { src: photo("backgrounds/campaign-boat-01"), alt: "Crest Jersey in burgundy, full look at the harbor" },
+      { src: photo("editorial/editorial-red-01"), alt: "Crest Jersey in burgundy beside the Weekend Duffel" },
+    ],
+    description: "A deep burgundy jersey finished with a white collar, fine piping, and the VANTE crest.",
+    details: ["Contrast white collar", "White piping along the sleeves and seams", "VANTE crest at the chest"],
+    sizes: ["XS", "S", "M", "L", "XL"],
     inStock: true,
   },
   {
     id: "v-03",
-    slug: "arc-trouser",
-    name: "Arc Trouser",
-    collection: "chapter-01",
-    price: 410,
-    color: "Ink",
-    colorHex: "#26272a",
-    images: gallery("Arc Trouser", { src: "/images/official/products/duffel-03.jpg", alt: "VANTE campaign image of a leather duffel and travel look" }),
-    description: "A straight, generous trouser balancing architectural drape with ease of movement.",
-    details: ["Dry wool twill", "Adjustable side tabs", "Relaxed straight leg", "Made in Portugal"],
+    slug: "motif-denim-short",
+    name: "Motif Denim Short",
+    collection: "essentials",
+    price: 180,
+    color: "Light wash",
+    colorHex: "#9fb0c4",
+    images: [
+      { src: photo("hero/hero-secondary"), alt: "Motif Denim Short in light wash, showing the red motif on the front" },
+      { src: photo("editorial/editorial-architecture-02"), alt: "Motif Denim Short worn beneath a street sign" },
+      { src: photo("hero/hero-editorial"), alt: "Motif Denim Short with the black jersey at the red mailboxes" },
+      { src: photo("editorial/editorial-staircase-01"), alt: "Motif Denim Short worn on the stairwell" },
+    ],
+    description: "A relaxed, knee-length short in light-wash denim, marked with our red motif across the front.",
+    details: ["Light-wash denim", "Red VANTE motif across the front leg", "Relaxed, knee-length cut"],
     sizes: ["28", "30", "32", "34", "36"],
     inStock: true,
   },
   {
     id: "v-04",
-    slug: "form-shirt",
-    name: "Form Shirt",
+    slug: "weekend-duffel",
+    name: "Weekend Duffel",
     collection: "essentials",
-    price: 260,
-    color: "Chalk",
-    colorHex: "#e2ddd3",
-    images: gallery("Form Shirt", { src: "/images/official/products/duffel-04.jpg", alt: "VANTE campaign image of a leather travel duffel" }),
-    description: "A crisp poplin shirt scaled for a measured, unforced proportion.",
-    details: ["Organic cotton poplin", "Mother-of-pearl buttons", "Curved hem", "Made in Portugal"],
-    sizes: ["XS", "S", "M", "L", "XL"],
+    price: 420,
+    color: "Brown",
+    colorHex: "#4a2c22",
+    images: [
+      { src: photo("products/duffel-03"), alt: "Weekend Duffel in brown, carried over the shoulder" },
+      { src: photo("products/duffel-02"), alt: "Weekend Duffel in brown, carried from a car" },
+      { src: photo("editorial/editorial-staircase-02"), alt: "Weekend Duffel in brown, set down on a stairwell" },
+      { src: photo("editorial/editorial-red-01"), alt: "Weekend Duffel in brown beside the red mailboxes" },
+    ],
+    description: "A generous brown holdall, sized for a weekend away and built to be carried often.",
+    details: ["Brown grained finish", "Twin carry handles", "Sized for a weekend away"],
+    sizes: ["One size"],
     inStock: true,
   },
 ];
 
+/** Product URLs from the previous catalog, kept so old links and bookmarks still land somewhere useful. */
+export const retiredProductSlugs: Record<string, string> = {
+  "object-001-coat": "once-upon-a-time-jersey",
+  "sable-knit": "crest-jersey-burgundy",
+  "arc-trouser": "motif-denim-short",
+  "form-shirt": "weekend-duffel",
+};
+
 export const FREE_DELIVERY_THRESHOLD = 400;
 
 export const sizeAndFit =
-  "Designed for a relaxed, clean line. Take your usual size for the intended shape; choose one size down for a closer fit.";
+  "Cut for a relaxed, easy fit. Take your usual size for the intended shape; choose one size down for a closer fit.";
 export const deliveryAndReturns =
   "Complimentary delivery on orders over $400. Returns are accepted within 14 days of delivery, in original condition.";
 
