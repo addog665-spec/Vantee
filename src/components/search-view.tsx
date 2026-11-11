@@ -28,7 +28,7 @@ export function SearchView() {
           autoFocus
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search pieces, materials, collections"
+          placeholder="Search pieces and drops"
           className="min-w-0 flex-1 bg-transparent text-lg outline-none placeholder:text-bone/35"
         />
       </label>

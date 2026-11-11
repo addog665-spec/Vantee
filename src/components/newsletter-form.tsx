@@ -22,7 +22,7 @@ export function NewsletterForm() {
   }
 
   if (status === "done") {
-    return <p className="max-w-md text-sm text-bone/75" role="status">Thank you. You will hear from the house when there is something worth saying.</p>;
+    return <p className="max-w-md text-sm text-bone/75" role="status">Thank you. You’ll be the first to hear about new drops.</p>;
   }
 
   return (

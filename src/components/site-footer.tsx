@@ -3,11 +3,7 @@ import { EmblemIcon } from "@/components/icons";
 
 const links = [
   { href: "/collections", label: "Collections" },
-  { href: "/journal", label: "Journal" },
   { href: "/story", label: "Our Story" },
-  { href: "/materials", label: "Materials" },
-  { href: "/lookbook", label: "Lookbook" },
-  { href: "/members", label: "Members" },
   { href: "/support", label: "Support" },
   { href: "/contact", label: "Contact" },
 ];

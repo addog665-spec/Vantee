@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: { default: site.title, template: "%s | VÄNTÉ" },
   description: site.description,
-  keywords: ["VÄNTÉ", "luxury fashion", "modern essentials", "quiet luxury"],
+  keywords: ["VÄNTÉ", "luxury streetwear", "Wear Your Advantage", "Kelvin Yeboah"],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",

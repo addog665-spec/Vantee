@@ -5,7 +5,7 @@ export function ContactForm({ email }: { email: string }) {
   if (!email) {
     return (
       <div className="border border-white/15 p-8 text-sm leading-6 text-bone/65">
-        Our contact address is being set up. In the meantime, reach the house through Instagram.
+        Our contact address is being set up. In the meantime, reach us on Instagram.
       </div>
     );
   }

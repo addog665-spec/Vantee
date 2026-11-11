@@ -8,7 +8,7 @@ export default function SearchPage() {
   return (
     <section className="min-h-[70svh] bg-obsidian pb-24 pt-28">
       <div className="page-frame">
-        <PlainHeader eyebrow="Search the house" title="Find what stays." />
+        <PlainHeader eyebrow="Search" title="Find your piece." />
         <SearchView />
       </div>
     </section>

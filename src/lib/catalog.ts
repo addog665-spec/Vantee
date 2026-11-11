@@ -14,7 +14,7 @@ export type Product = {
   edition?: string;
 };
 
-export type CollectionSlug = "chapter-01" | "essentials" | "advantage-club" | "signature" | "bloom" | "after-dark";
+export type CollectionSlug = "chapter-01" | "advantage-club" | "signature" | "bloom" | "after-dark";
 
 export type Collection = {
   slug: CollectionSlug;
@@ -32,7 +32,6 @@ export type Collection = {
 
 export const collections: Collection[] = [
   { slug: "chapter-01", name: "Chapter 01", tagline: "Where the story begins.", image: "/images/official/campaign/campaign-harbor-01.jpg", imageAlt: "VÄNTÉ Chapter 01 campaign at the harbor" },
-  { slug: "essentials", name: "Essentials", tagline: "The pieces you reach for first.", image: "/images/official/campaign/campaign-harbor-03.jpg", imageAlt: "VÄNTÉ Essentials campaign at the harbor" },
   {
     slug: "advantage-club",
     name: "Advantage Club",
@@ -100,7 +99,7 @@ export const products: Product[] = [
     id: "v-03",
     slug: "motif-denim-short",
     name: "Motif Denim Short",
-    collection: "essentials",
+    collection: "chapter-01",
     price: 180,
     color: "Light wash",
     colorHex: "#9fb0c4",
@@ -119,7 +118,7 @@ export const products: Product[] = [
     id: "v-04",
     slug: "weekend-duffel",
     name: "Weekend Duffel",
-    collection: "essentials",
+    collection: "chapter-01",
     price: 420,
     color: "Brown",
     colorHex: "#4a2c22",

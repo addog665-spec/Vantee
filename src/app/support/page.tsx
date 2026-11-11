@@ -12,8 +12,8 @@ const faqs = [
   { q: "When will my order arrive?", a: "Orders leave our studio within one business day. You will receive tracking by email when your order is collected." },
   { q: "Is delivery free?", a: "Delivery is complimentary on orders over $400. Below that, the delivery cost is shown at checkout before you pay." },
   { q: "Can I return a piece?", a: "Yes. Unworn items in original condition can be returned within 14 days of delivery." },
-  { q: "How should I care for my piece?", a: "Specific care is listed on each product page. When in doubt, keep washing infrequent and storage thoughtful." },
-  { q: "Do you offer repairs?", a: "We are developing a repair pathway for VÄNTÉ pieces. Contact the house with your item details and we will advise." },
+  { q: "How should I care for my piece?", a: "Wash cold and inside out, then air dry. It keeps prints, embroidery and colour sharp for longer." },
+  { q: "Something wrong with my piece?", a: "Contact us with your order details and a photo, and we will make it right." },
 ];
 
 const faqJsonLd = {
@@ -29,7 +29,7 @@ export default function SupportPage() {
       <PageHero
         eyebrow="Support"
         title="Care, without friction."
-        intro="A concise answer is usually the best kind. For anything else, the house is close."
+        intro="A concise answer is usually the best kind. For anything else, we’re a message away."
         image="/images/official/backgrounds/campaign-boat-01.jpg"
         imageAlt="VÄNTÉ campaign at the harbor"
       />
@@ -47,7 +47,7 @@ export default function SupportPage() {
           </div>
           <aside className="h-fit border border-white/15 p-7">
             <p className="eyebrow">Need a hand?</p>
-            <h2 className="mt-4 font-serif text-3xl">Talk to the house.</h2>
+            <h2 className="mt-4 font-serif text-3xl">Talk to us.</h2>
             <p className="mt-4 text-sm leading-6 text-bone/60">For order-specific support or material guidance, write directly to our team.</p>
             <Link href="/contact" className="btn mt-7">Contact us</Link>
           </aside>

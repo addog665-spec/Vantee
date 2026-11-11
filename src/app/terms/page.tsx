@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Terms", alternates: { canonical: "/t
 export default function TermsPage() {
   return (
     <LegalPage
-      title="Terms of the house."
+      title="Terms of service."
       sections={[
         { heading: "Using this site", text: "Please use this site lawfully and with respect for its content. Product availability, prices, and descriptions may change as each chapter evolves." },
         { heading: "Orders", text: "A confirmed order is subject to availability and our acceptance. Payment, delivery, and refund terms are presented during checkout." },

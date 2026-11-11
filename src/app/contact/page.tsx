@@ -5,7 +5,7 @@ import { contactEmail } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "For orders, materials, appointments, and anything else that deserves a proper answer.",
+  description: "For orders, sizing, collaborations, and anything else you need from VÄNTÉ.",
   alternates: { canonical: "/contact" },
 };
 
@@ -13,9 +13,9 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="Contact the house"
+        eyebrow="Contact"
         title="We are listening."
-        intro="For orders, materials, appointments, and anything else that deserves a proper answer."
+        intro="For orders, sizing, collaborations, and anything else you need from VÄNTÉ."
         image="/images/official/editorial/editorial-staircase-01.jpg"
         imageAlt="VÄNTÉ group campaign on the staircase"
       />

@@ -8,17 +8,12 @@ import { useStore } from "@/lib/store";
 
 const primary = [
   { href: "/collections", label: "Collections" },
-  { href: "/journal", label: "Journal" },
   { href: "/story", label: "Our Story" },
 ];
 
 const drawer = [
   { href: "/collections", label: "Collections" },
-  { href: "/lookbook", label: "Lookbook" },
-  { href: "/journal", label: "Journal" },
   { href: "/story", label: "Our Story" },
-  { href: "/materials", label: "Materials" },
-  { href: "/members", label: "Members" },
   { href: "/support", label: "Support" },
   { href: "/contact", label: "Contact" },
 ];
@@ -136,7 +131,6 @@ export function SiteHeader() {
           </nav>
           <div className="mt-auto flex gap-6 pt-8 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-bone/70">
             <Link href="/wishlist">Wishlist ({wishlist.length})</Link>
-            <Link href="/account">Account</Link>
           </div>
         </div>
       </div>

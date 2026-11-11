@@ -48,8 +48,8 @@ export function BagView() {
   if (!lines.length) {
     return (
       <div className="mt-12 border-y border-white/15 py-16 text-center">
-        <p className="font-serif text-3xl">Your bag is quiet.</p>
-        <p className="mt-3 text-sm text-bone/60">When something earns its place, it will be here.</p>
+        <p className="font-serif text-3xl">Your bag is empty.</p>
+        <p className="mt-3 text-sm text-bone/60">Find your piece in the collection.</p>
         <Link href="/collections" className="btn mt-8">Explore collection</Link>
       </div>
     );
@@ -105,7 +105,7 @@ export function BagView() {
         </div>
         {enabled === false ? (
           <p className="mt-6 border border-champagne/40 p-4 text-xs leading-5 text-bone/70">
-            Online payment is being set up. Your bag is saved; please contact the house to place an order in the meantime.
+            Online payment is being set up. Your bag is saved; please contact us to place an order in the meantime.
           </p>
         ) : (
           <button type="button" onClick={checkout} disabled={state.busy || enabled === null} className="btn btn-solid mt-6 h-14 w-full">
