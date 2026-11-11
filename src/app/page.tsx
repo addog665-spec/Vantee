@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon } from "@/components/icons";
+import { LoopVideo } from "@/components/loop-video";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { ProductCard } from "@/components/product-card";
 import { collections, getCollection, products } from "@/lib/catalog";
@@ -85,7 +86,11 @@ export default function Home() {
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {drops.map((d) => (
               <Link key={d.slug} href={`/collections/${d.slug}`} className="group relative block aspect-[4/5] overflow-hidden bg-graphite" data-reveal>
-                <Image src={d.image} alt={d.imageAlt} fill sizes="(min-width: 768px) 32vw, 100vw" className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]" />
+                {d.video ? (
+                  <LoopVideo src={d.video.src} poster={d.video.poster} label={d.imageAlt} className="absolute inset-0 h-full w-full object-cover" />
+                ) : (
+                  <Image src={d.image} alt={d.imageAlt} fill sizes="(min-width: 768px) 32vw, 100vw" className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]" />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <p className="eyebrow">New drop</p>

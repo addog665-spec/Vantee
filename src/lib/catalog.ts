@@ -26,6 +26,8 @@ export type Collection = {
   heroImage?: string;
   /** Standalone releases, featured together on the homepage. */
   drop?: boolean;
+  /** A short muted clip from the drop, looped on its page and homepage tile. */
+  video?: { src: string; poster: string };
   /** Photos from the drop's shoot, shown under its pieces. */
   gallery?: { src: string; alt: string }[];
 };
@@ -48,7 +50,21 @@ export const collections: Collection[] = [
       { src: "/images/official/drops/advantage-club-reclined-02.jpg", alt: "Lounging in the red chair in the St. Vänté Advantage Club Tee" },
     ],
   },
-  { slug: "signature", name: "Signature", tagline: "The VÄNTÉ name, in black on white rib.", image: "/images/official/drops/signature-crop-tank.jpg", imageAlt: "The Signature Crop Tank worn with denim", drop: true },
+  {
+    slug: "signature",
+    name: "Signature",
+    tagline: "The VÄNTÉ name, in black on white rib.",
+    image: "/images/official/drops/signature-look-park-4x5.jpg",
+    heroImage: "/images/official/drops/signature-banner.jpg",
+    imageAlt: "The Signature Rib Tank cropped, with the Signature Snap Short",
+    drop: true,
+    video: { src: "/videos/signature-drop.mp4", poster: "/images/official/drops/signature-video-poster.jpg" },
+    gallery: [
+      { src: "/images/official/drops/signature-look-park.jpg", alt: "The Signature Rib Tank cropped, with the Signature Snap Short and heels" },
+      { src: "/images/official/drops/signature-look-plaza.jpg", alt: "The Signature Rib Tank and Signature Snap Short with white socks and trainers" },
+      { src: "/images/official/drops/signature-crop-tank.jpg", alt: "The VÄNTÉ script and figure emblem on the Signature Rib Tank" },
+    ],
+  },
   { slug: "bloom", name: "Bloom", tagline: "Script and flowers on white and burgundy.", image: "/images/official/drops/bloom-raglan-tee.jpg", imageAlt: "Bloom Raglan Tees laid out in the sun", drop: true },
   { slug: "after-dark", name: "After Dark", tagline: "A considered evening uniform.", image: "/images/official/hero/hero-secondary.jpg", imageAlt: "VÄNTÉ campaign portrait at the red mailboxes" },
 ];
@@ -157,16 +173,40 @@ export const products: Product[] = [
   },
   {
     id: "v-06",
-    slug: "signature-crop-tank",
-    name: "Signature Crop Tank",
+    slug: "signature-rib-tank",
+    name: "Signature Rib Tank",
     collection: "signature",
     price: 60,
     color: "White",
     colorHex: "#f4f2ee",
-    images: [{ src: photo("drops/signature-crop-tank"), alt: "Signature Crop Tank in white rib with the VÄNTÉ script and figure emblem" }],
-    description: "A cropped, close-fitting tank in white rib, with the VÄNTÉ script and figure emblem in black at the chest.",
-    details: ["White ribbed knit", "Cropped, close fit", "VÄNTÉ script and figure emblem in black at the chest", "Black floral detail at the hem"],
-    sizes: ["XS", "S", "M", "L"],
+    images: [
+      { src: photo("drops/signature-tank-worn"), alt: "Signature Rib Tank in white with the VÄNTÉ script, figure emblem and black flower" },
+      { src: photo("drops/signature-crop-tank"), alt: "Close-up of the VÄNTÉ script and figure emblem on the Signature Rib Tank" },
+      { src: photo("drops/signature-look-park-4x5"), alt: "The Signature Rib Tank worn cropped with the Signature Snap Short" },
+      { src: photo("drops/signature-look-plaza-4x5"), alt: "The Signature Rib Tank and Signature Snap Short, full look" },
+    ],
+    description: "A close-fitting tank in white rib, with the VÄNTÉ script and figure emblem in black at the chest and a black flower at the side.",
+    details: ["White ribbed knit", "Close, body-skimming fit", "VÄNTÉ script and figure emblem in black at the chest", "Black floral print at the side"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    inStock: true,
+    edition: "New drop",
+  },
+  {
+    id: "v-08",
+    slug: "signature-snap-short",
+    name: "Signature Snap Short",
+    collection: "signature",
+    price: 90,
+    color: "Heather grey",
+    colorHex: "#bdbdbb",
+    images: [
+      { src: photo("drops/signature-snap-short-worn"), alt: "Signature Snap Short in heather grey with black side snaps" },
+      { src: photo("drops/signature-look-plaza-4x5"), alt: "The Signature Snap Short with the Signature Rib Tank" },
+      { src: photo("drops/signature-look-park-4x5"), alt: "The Signature Snap Short worn with heels" },
+    ],
+    description: "A relaxed, knee-length short in heather grey, with a drawstring waist and a line of black snap buttons down the side.",
+    details: ["Heather grey sweat fabric", "Elasticated drawstring waist", "Black snap buttons down the side", "VÄNTÉ figure emblem at the front"],
+    sizes: ["XS", "S", "M", "L", "XL"],
     inStock: true,
     edition: "New drop",
   },
@@ -203,6 +243,13 @@ export const looks: Look[] = [
     pieces: ["once-upon-a-time-jersey", "motif-denim-short", "weekend-duffel"],
   },
   {
+    slug: "signature-head-to-toe",
+    title: "Head to toe",
+    image: photo("drops/signature-look-park-4x5"),
+    imageAlt: "The Signature Rib Tank and Signature Snap Short worn together",
+    pieces: ["signature-rib-tank", "signature-snap-short"],
+  },
+  {
     slug: "at-the-mailboxes",
     title: "At the mailboxes",
     image: photo("editorial/editorial-red-01"),
@@ -219,6 +266,7 @@ export const retiredProductSlugs: Record<string, string> = {
   "sable-knit": "crest-jersey-burgundy",
   "arc-trouser": "motif-denim-short",
   "form-shirt": "weekend-duffel",
+  "signature-crop-tank": "signature-rib-tank",
 };
 
 export const FREE_DELIVERY_THRESHOLD = 400;

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CollectionTabs } from "@/components/collection-tabs";
+import { LoopVideo } from "@/components/loop-video";
 import { PageHero } from "@/components/page-hero";
 import { ProductGrid } from "@/components/product-card";
 import { collections, getCollection, productsIn } from "@/lib/catalog";
@@ -43,6 +44,20 @@ export default async function CollectionPage({ params }: PageProps<"/collections
           )}
         </div>
       </section>
+      {collection.video && (
+        <section className="border-t border-white/10 bg-obsidian py-20 sm:py-28">
+          <div className="page-frame grid items-center gap-10 md:grid-cols-[1fr_minmax(0,24rem)] md:gap-16">
+            <div data-reveal>
+              <p className="eyebrow">In motion</p>
+              <h2 className="display mt-4 text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.02]">{collection.name}, out in the sun.</h2>
+              <p className="mt-6 max-w-sm text-sm leading-6 text-bone/65">{collection.tagline}</p>
+            </div>
+            <div className="relative mx-auto aspect-[9/16] w-full max-w-sm overflow-hidden bg-graphite" data-reveal>
+              <LoopVideo src={collection.video.src} poster={collection.video.poster} label={`${collection.name} drop video`} className="absolute inset-0 h-full w-full object-cover" />
+            </div>
+          </div>
+        </section>
+      )}
       {collection.gallery && (
         <section className="on-light bg-ivory py-20 text-ink sm:py-28">
           <div className="page-frame">
