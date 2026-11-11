@@ -7,16 +7,16 @@ import { site, siteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: site.title, template: "%s | VANTE" },
+  title: { default: site.title, template: "%s | VÄNTÉ" },
   description: site.description,
-  keywords: ["VANTE", "luxury fashion", "modern essentials", "quiet luxury"],
+  keywords: ["VÄNTÉ", "luxury fashion", "modern essentials", "quiet luxury"],
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: site.name,
     title: site.title,
     description: site.description,
-    images: [{ url: site.ogImage, width: 1638, height: 2048, alt: "VANTE launch campaign at the red mailboxes" }],
+    images: [{ url: site.ogImage, width: 1638, height: 2048, alt: "VÄNTÉ launch campaign at the red mailboxes" }],
   },
   twitter: { card: "summary_large_image", title: site.title, description: site.description, images: [site.ogImage] },
   robots: { index: true, follow: true },

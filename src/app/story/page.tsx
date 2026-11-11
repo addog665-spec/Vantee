@@ -5,7 +5,7 @@ import { PageHero } from "@/components/page-hero";
 
 export const metadata: Metadata = {
   title: "The House",
-  description: "VANTE is built around the quiet advantage of feeling fully yourself.",
+  description: "VÄNTÉ is built around the quiet advantage of feeling fully yourself.",
   alternates: { canonical: "/story" },
 };
 
@@ -15,9 +15,9 @@ export default function StoryPage() {
       <PageHero
         eyebrow="The House"
         title="Make room for what matters."
-        intro="VANTE is built around the quiet advantage of feeling fully yourself."
+        intro="VÄNTÉ is built around the quiet advantage of feeling fully yourself."
         image="/images/official/campaign/campaign-harbor-04.jpg"
-        imageAlt="VANTE group campaign at the harbor"
+        imageAlt="VÄNTÉ group campaign at the harbor"
       />
       <section className="bg-obsidian">
         <div className="page-frame page-section grid gap-10 md:grid-cols-[14rem_1fr]">
@@ -27,14 +27,14 @@ export default function StoryPage() {
               We make objects for a life that does not need to announce itself.
             </p>
             <p className="mt-8 max-w-xl text-base leading-7 text-bone/65">
-              Every VANTE piece begins with a useful tension: precise but relaxed, modern but lasting, recognizable but never loud. We work with specialist makers who share a belief in long gestures over quick effects.
+              Every VÄNTÉ piece begins with a useful tension: precise but relaxed, modern but lasting, recognizable but never loud. We work with specialist makers who share a belief in long gestures over quick effects.
             </p>
           </div>
         </div>
       </section>
       <section className="on-light grid bg-ivory text-ink md:grid-cols-2">
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[85svh]">
-          <Image src="/images/official/editorial/editorial-staircase-01.jpg" alt="VANTE launch campaign on a staircase" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <Image src="/images/official/editorial/editorial-staircase-01.jpg" alt="VÄNTÉ launch campaign on a staircase" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
         </div>
         <div className="flex items-center px-[clamp(1.25rem,6vw,7rem)] py-20" data-reveal>
           <div>

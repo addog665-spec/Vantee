@@ -4,7 +4,7 @@ import { WishlistButton } from "@/components/wishlist-button";
 import { collectionName, formatPrice, type Product } from "@/lib/catalog";
 
 export function ProductCard({ product, priority = false }: { product: Product; priority?: boolean }) {
-  const image = product.images[0];
+  const [image, alternate] = product.images;
   return (
     <article className="group relative min-w-0">
       <Link href={`/products/${product.slug}`} className="block">
@@ -15,8 +15,17 @@ export function ProductCard({ product, priority = false }: { product: Product; p
             fill
             priority={priority}
             sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 85vw"
-            className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]"
+            className={`object-cover transition-[transform,opacity] duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] ${alternate ? "group-hover:opacity-0" : ""}`}
           />
+          {alternate && (
+            <Image
+              src={alternate.src}
+              alt=""
+              fill
+              sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 85vw"
+              className="object-cover opacity-0 transition-[transform,opacity] duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04] group-hover:opacity-100"
+            />
+          )}
           {product.edition && (
             <span className="absolute left-3 top-3 bg-obsidian/75 px-2.5 py-1 text-[0.58rem] font-bold uppercase tracking-[0.14em] backdrop-blur">
               {product.edition}

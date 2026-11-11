@@ -5,7 +5,7 @@ import { PageHero } from "@/components/page-hero";
 
 export const metadata: Metadata = {
   title: "Lookbook",
-  description: "VANTE Chapter 01: a study in presence, photographed at the harbor.",
+  description: "VÄNTÉ Chapter 01: a study in presence, photographed at the harbor.",
   alternates: { canonical: "/lookbook" },
 };
 
@@ -22,7 +22,7 @@ const looks = [
 export default function LookbookPage() {
   return (
     <>
-      <PageHero eyebrow="Chapter 01 / 2026" title="A study in presence." image="/images/official/campaign/campaign-harbor-02.jpg" imageAlt="VANTE campaign at the harbor" />
+      <PageHero eyebrow="Chapter 01 / 2026" title="A study in presence." image="/images/official/campaign/campaign-harbor-02.jpg" imageAlt="VÄNTÉ campaign at the harbor" />
       <section className="bg-obsidian py-4 sm:py-8">
         <div className="page-frame grid gap-4 sm:grid-cols-2">
           {looks.map((look, i) => (

@@ -4,7 +4,7 @@ import { PageHero } from "@/components/page-hero";
 
 export const metadata: Metadata = {
   title: "Support",
-  description: "Delivery, returns, care, and repairs for VANTE pieces.",
+  description: "Delivery, returns, care, and repairs for VÄNTÉ pieces.",
   alternates: { canonical: "/support" },
 };
 
@@ -13,7 +13,7 @@ const faqs = [
   { q: "Is delivery free?", a: "Delivery is complimentary on orders over $400. Below that, the delivery cost is shown at checkout before you pay." },
   { q: "Can I return a piece?", a: "Yes. Unworn items in original condition can be returned within 14 days of delivery." },
   { q: "How should I care for my piece?", a: "Specific care is listed on each product page. When in doubt, keep washing infrequent and storage thoughtful." },
-  { q: "Do you offer repairs?", a: "We are developing a repair pathway for VANTE pieces. Contact the house with your item details and we will advise." },
+  { q: "Do you offer repairs?", a: "We are developing a repair pathway for VÄNTÉ pieces. Contact the house with your item details and we will advise." },
 ];
 
 const faqJsonLd = {
@@ -31,7 +31,7 @@ export default function SupportPage() {
         title="Care, without friction."
         intro="A concise answer is usually the best kind. For anything else, the house is close."
         image="/images/official/backgrounds/campaign-boat-01.jpg"
-        imageAlt="VANTE campaign at the harbor"
+        imageAlt="VÄNTÉ campaign at the harbor"
       />
       <section className="bg-obsidian py-20">
         <div className="page-frame grid gap-12 lg:grid-cols-[1fr_22rem]">

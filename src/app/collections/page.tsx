@@ -6,7 +6,7 @@ import { products } from "@/lib/catalog";
 
 export const metadata: Metadata = {
   title: "Collections",
-  description: "The VANTE wardrobe: jerseys, tees, denim, and a weekend bag, from the core collection and each new drop.",
+  description: "The VÄNTÉ wardrobe: jerseys, tees, denim, and a weekend bag, from the core collection and each new drop.",
   alternates: { canonical: "/collections" },
 };
 
@@ -18,7 +18,7 @@ export default function CollectionsPage() {
         title="Objects with purpose."
         intro="The pieces are edited as a whole, but designed to be claimed individually."
         image="/images/official/campaign/campaign-harbor-02.jpg"
-        imageAlt="VANTE campaign at the harbor"
+        imageAlt="VÄNTÉ campaign at the harbor"
       />
       <section className="bg-obsidian pb-24 pt-10">
         <div className="page-frame">

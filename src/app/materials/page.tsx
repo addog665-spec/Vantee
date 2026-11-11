@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const materials = [
   { title: "Jersey", text: "A smooth, easy knit cut for movement, finished with a contrast collar and fine piping.", image: "/images/official/editorial/editorial-red-02.jpg", alt: "The burgundy Crest Jersey up close" },
   { title: "Denim", text: "Washed for a soft hand and a lived-in tone, then marked with our own red motif.", image: "/images/official/editorial/editorial-architecture-02.jpg", alt: "The Motif Denim Short and its red motif" },
-  { title: "Time", text: "Small-run production makes room for careful hands and less unnecessary waste.", image: "/images/official/campaign/campaign-story-01.jpg", alt: "VANTE campaign at the breakwater" },
+  { title: "Time", text: "Small-run production makes room for careful hands and less unnecessary waste.", image: "/images/official/campaign/campaign-story-01.jpg", alt: "VÄNTÉ campaign at the breakwater" },
 ];
 
 export default function MaterialsPage() {

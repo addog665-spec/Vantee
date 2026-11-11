@@ -29,12 +29,12 @@ export type Collection = {
 };
 
 export const collections: Collection[] = [
-  { slug: "chapter-01", name: "Chapter 01", tagline: "Where the story begins.", image: "/images/official/campaign/campaign-harbor-01.jpg", imageAlt: "VANTE Chapter 01 campaign at the harbor" },
-  { slug: "essentials", name: "Essentials", tagline: "The pieces you reach for first.", image: "/images/official/campaign/campaign-harbor-03.jpg", imageAlt: "VANTE Essentials campaign at the harbor" },
+  { slug: "chapter-01", name: "Chapter 01", tagline: "Where the story begins.", image: "/images/official/campaign/campaign-harbor-01.jpg", imageAlt: "VÄNTÉ Chapter 01 campaign at the harbor" },
+  { slug: "essentials", name: "Essentials", tagline: "The pieces you reach for first.", image: "/images/official/campaign/campaign-harbor-03.jpg", imageAlt: "VÄNTÉ Essentials campaign at the harbor" },
   { slug: "advantage-club", name: "Advantage Club", tagline: "A postcard from St. Vänté, worn on a ringer tee.", image: "/images/official/drops/advantage-club-tee-front.jpg", heroImage: "/images/official/drops/advantage-club-hero.jpg", imageAlt: "The St. Vänté Advantage Club Tee and its seaside window graphic", drop: true },
-  { slug: "signature", name: "Signature", tagline: "The VANTE name, in black on white rib.", image: "/images/official/drops/signature-crop-tank.jpg", imageAlt: "The Signature Crop Tank worn with denim", drop: true },
+  { slug: "signature", name: "Signature", tagline: "The VÄNTÉ name, in black on white rib.", image: "/images/official/drops/signature-crop-tank.jpg", imageAlt: "The Signature Crop Tank worn with denim", drop: true },
   { slug: "bloom", name: "Bloom", tagline: "Script and flowers on white and burgundy.", image: "/images/official/drops/bloom-raglan-tee.jpg", imageAlt: "Bloom Raglan Tees laid out in the sun", drop: true },
-  { slug: "after-dark", name: "After Dark", tagline: "A considered evening uniform.", image: "/images/official/hero/hero-secondary.jpg", imageAlt: "VANTE campaign portrait at the red mailboxes" },
+  { slug: "after-dark", name: "After Dark", tagline: "A considered evening uniform.", image: "/images/official/hero/hero-secondary.jpg", imageAlt: "VÄNTÉ campaign portrait at the red mailboxes" },
 ];
 
 const photo = (file: string) => `/images/official/${file}.jpg`;
@@ -54,8 +54,8 @@ export const products: Product[] = [
       { src: photo("editorial/editorial-architecture-01"), alt: "Once Upon a Time Jersey worn beneath a street sign" },
       { src: photo("editorial/editorial-staircase-02"), alt: "Once Upon a Time Jersey worn on a stairwell" },
     ],
-    description: "Our signature jersey in black, with a crisp white collar and the story that started VANTE written across the back.",
-    details: ["Contrast white collar", "White piping at the sleeves", "VANTE crest at the chest", "“Once upon a time” script graphic on the back"],
+    description: "Our signature jersey in black, with a crisp white collar and the story that started VÄNTÉ written across the back.",
+    details: ["Contrast white collar", "White piping at the sleeves", "VÄNTÉ crest at the chest", "“Once upon a time” script graphic on the back"],
     sizes: ["XS", "S", "M", "L", "XL"],
     inStock: true,
     edition: "Limited run",
@@ -74,8 +74,8 @@ export const products: Product[] = [
       { src: photo("backgrounds/campaign-boat-01"), alt: "Crest Jersey in burgundy, full look at the harbor" },
       { src: photo("editorial/editorial-red-01"), alt: "Crest Jersey in burgundy beside the Weekend Duffel" },
     ],
-    description: "A deep burgundy jersey finished with a white collar, fine piping, and the VANTE crest.",
-    details: ["Contrast white collar", "White piping along the sleeves and seams", "VANTE crest at the chest"],
+    description: "A deep burgundy jersey finished with a white collar, fine piping, and the VÄNTÉ crest.",
+    details: ["Contrast white collar", "White piping along the sleeves and seams", "VÄNTÉ crest at the chest"],
     sizes: ["XS", "S", "M", "L", "XL"],
     inStock: true,
   },
@@ -94,7 +94,7 @@ export const products: Product[] = [
       { src: photo("editorial/editorial-staircase-01"), alt: "Motif Denim Short worn on the stairwell" },
     ],
     description: "A relaxed, knee-length short in light-wash denim, marked with our red motif across the front.",
-    details: ["Light-wash denim", "Red VANTE motif across the front leg", "Relaxed, knee-length cut"],
+    details: ["Light-wash denim", "Red VÄNTÉ motif across the front leg", "Relaxed, knee-length cut"],
     sizes: ["28", "30", "32", "34", "36"],
     inStock: true,
   },
@@ -127,10 +127,10 @@ export const products: Product[] = [
     colorHex: "#ece4d6",
     images: [
       { src: photo("drops/advantage-club-tee-front"), alt: "Front of the St. Vänté Advantage Club Tee with its seaside window graphic" },
-      { src: photo("drops/advantage-club-tee-back"), alt: "Back of the St. Vänté Advantage Club Tee with the VANTE figure emblem" },
+      { src: photo("drops/advantage-club-tee-back"), alt: "Back of the St. Vänté Advantage Club Tee with the VÄNTÉ figure emblem" },
     ],
     description: "A cream ringer tee with an open window onto the sea: blue shutters, bougainvillea, and a table set for two at St. Vänté.",
-    details: ["Cream body with blue ringer collar and cuffs", "St. Vänté Advantage Club window graphic on the front", "VANTE figure emblem below the back collar"],
+    details: ["Cream body with blue ringer collar and cuffs", "St. Vänté Advantage Club window graphic on the front", "VÄNTÉ figure emblem below the back collar"],
     sizes: ["XS", "S", "M", "L", "XL"],
     inStock: true,
     edition: "New drop",
@@ -143,9 +143,9 @@ export const products: Product[] = [
     price: 60,
     color: "White",
     colorHex: "#f4f2ee",
-    images: [{ src: photo("drops/signature-crop-tank"), alt: "Signature Crop Tank in white rib with the VANTE script and figure emblem" }],
-    description: "A cropped, close-fitting tank in white rib, with the VANTE script and figure emblem in black at the chest.",
-    details: ["White ribbed knit", "Cropped, close fit", "VANTE script and figure emblem in black at the chest", "Black floral detail at the hem"],
+    images: [{ src: photo("drops/signature-crop-tank"), alt: "Signature Crop Tank in white rib with the VÄNTÉ script and figure emblem" }],
+    description: "A cropped, close-fitting tank in white rib, with the VÄNTÉ script and figure emblem in black at the chest.",
+    details: ["White ribbed knit", "Cropped, close fit", "VÄNTÉ script and figure emblem in black at the chest", "Black floral detail at the hem"],
     sizes: ["XS", "S", "M", "L"],
     inStock: true,
     edition: "New drop",
@@ -160,16 +160,38 @@ export const products: Product[] = [
     colorHex: "#7a1f3d",
     images: [
       { src: photo("drops/bloom-raglan-tee"), alt: "Bloom Raglan Tees in white with burgundy sleeves, laid out in the sun" },
-      { src: photo("drops/bloom-raglan-tee-yellow-bloom"), alt: "Vänte script and yellow flower print on the Bloom Raglan Tee" },
-      { src: photo("drops/bloom-raglan-tee-black-bloom"), alt: "Vänte script and black flower print on the Bloom Raglan Tee" },
+      { src: photo("drops/bloom-raglan-tee-yellow-bloom"), alt: "Vänté script and yellow flower print on the Bloom Raglan Tee" },
+      { src: photo("drops/bloom-raglan-tee-black-bloom"), alt: "Vänté script and black flower print on the Bloom Raglan Tee" },
     ],
-    description: "A white raglan tee with burgundy sleeves, the Vänte script across the body, and a hand-drawn flower in full bloom.",
-    details: ["White body with burgundy raglan sleeves", "Vänte script across the body", "Floral print"],
+    description: "A white raglan tee with burgundy sleeves, the Vänté script across the body, and a hand-drawn flower in full bloom.",
+    details: ["White body with burgundy raglan sleeves", "Vänté script across the body", "Floral print"],
     sizes: ["XS", "S", "M", "L", "XL"],
     inStock: true,
     edition: "New drop",
   },
 ];
+
+export type Look = { slug: string; title: string; image: string; imageAlt: string; pieces: string[] };
+
+/** Campaign photos that show several catalog pieces worn together. */
+export const looks: Look[] = [
+  {
+    slug: "out-of-town",
+    title: "Out of town",
+    image: photo("products/duffel-01"),
+    imageAlt: "The Once Upon a Time Jersey and Motif Denim Short, with the Weekend Duffel",
+    pieces: ["once-upon-a-time-jersey", "motif-denim-short", "weekend-duffel"],
+  },
+  {
+    slug: "at-the-mailboxes",
+    title: "At the mailboxes",
+    image: photo("editorial/editorial-red-01"),
+    imageAlt: "The Crest Jersey in burgundy beside the Weekend Duffel",
+    pieces: ["crest-jersey-burgundy", "weekend-duffel"],
+  },
+];
+
+export const lookFor = (slug: string) => looks.find((l) => l.pieces.includes(slug));
 
 /** Product URLs from the previous catalog, kept so old links and bookmarks still land somewhere useful. */
 export const retiredProductSlugs: Record<string, string> = {

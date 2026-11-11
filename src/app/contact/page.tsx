@@ -17,7 +17,7 @@ export default function ContactPage() {
         title="We are listening."
         intro="For orders, materials, appointments, and anything else that deserves a proper answer."
         image="/images/official/editorial/editorial-staircase-01.jpg"
-        imageAlt="VANTE group campaign on the staircase"
+        imageAlt="VÄNTÉ group campaign on the staircase"
       />
       <section className="bg-obsidian py-20">
         <div className="page-frame grid gap-14 md:grid-cols-[1fr_1.4fr]">

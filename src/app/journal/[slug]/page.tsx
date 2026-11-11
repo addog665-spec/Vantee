@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: PageProps<"/journal/[slug]">)
     title: entry.title,
     description: entry.excerpt,
     alternates: { canonical: `/journal/${entry.slug}` },
-    openGraph: { type: "article", title: `${entry.title} | VANTE`, description: entry.excerpt, images: [entry.image], publishedTime: entry.isoDate },
+    openGraph: { type: "article", title: `${entry.title} | VÄNTÉ`, description: entry.excerpt, images: [entry.image], publishedTime: entry.isoDate },
   };
 }
 
@@ -34,7 +34,7 @@ export default async function JournalEntryPage({ params }: PageProps<"/journal/[
     description: entry.excerpt,
     image: `${siteUrl}${entry.image}`,
     datePublished: entry.isoDate,
-    publisher: { "@type": "Organization", name: "VANTE" },
+    publisher: { "@type": "Organization", name: "VÄNTÉ" },
   };
 
   return (

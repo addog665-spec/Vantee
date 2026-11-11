@@ -22,7 +22,7 @@ export default function MembersPage() {
         title="A closer relationship."
         intro="Private releases, considered recommendations, and a more personal way to return to the house."
         image="/images/official/campaign/campaign-harbor-03.jpg"
-        imageAlt="VANTE campaign at the harbor"
+        imageAlt="VÄNTÉ campaign at the harbor"
       />
       <section className="bg-[#11110f] py-20">
         <div className="page-frame grid gap-px bg-white/12 md:grid-cols-3">

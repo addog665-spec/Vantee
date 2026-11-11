@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EmblemIcon } from "@/components/icons";
 
 const links = [
   { href: "/collections", label: "Collections" },
@@ -16,7 +17,10 @@ export function SiteFooter() {
     <footer className="border-t border-white/12 bg-[#11110f]">
       <div className="page-frame grid gap-12 py-16 md:grid-cols-[1.2fr_1fr]">
         <div>
-          <p className="font-serif text-2xl tracking-[0.22em]">VANTE</p>
+          <p className="flex items-center gap-3 font-serif text-2xl tracking-[0.22em]">
+            <EmblemIcon className="h-9 w-auto" />
+            VÄNTÉ
+          </p>
           <p className="mt-4 max-w-xs text-sm leading-6 text-bone/60">
             A modern wardrobe shaped by restraint, purpose, and the passage of time.
           </p>
@@ -30,7 +34,7 @@ export function SiteFooter() {
         </nav>
       </div>
       <div className="page-frame flex flex-col gap-4 border-t border-white/10 py-6 text-[0.62rem] uppercase tracking-[0.14em] text-bone/45 sm:flex-row sm:items-center sm:justify-between">
-        <p>© {new Date().getFullYear()} VANTE</p>
+        <p>© {new Date().getFullYear()} VÄNTÉ</p>
         <div className="flex gap-6">
           <Link href="/privacy" className="hover:text-bone">Privacy</Link>
           <Link href="/terms" className="hover:text-bone">Terms</Link>

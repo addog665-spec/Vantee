@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { BagIcon, CloseIcon, HeartIcon, MenuIcon, SearchIcon } from "@/components/icons";
+import { BagIcon, CloseIcon, EmblemIcon, HeartIcon, MenuIcon, SearchIcon } from "@/components/icons";
 import { useStore } from "@/lib/store";
 
 const primary = [
@@ -79,8 +79,9 @@ export function SiteHeader() {
               ))}
             </nav>
           </div>
-          <Link href="/" aria-label="VANTE home" className="font-serif text-xl tracking-[0.22em] text-bone">
-            VANTE
+          <Link href="/" aria-label="VÄNTÉ home" className="flex items-center gap-2.5 font-serif text-xl tracking-[0.22em] text-bone">
+            <EmblemIcon className="h-7 w-auto" />
+            VÄNTÉ
           </Link>
           <div className="flex items-center justify-end">
             <Link href="/search" aria-label="Search" className="flex h-11 w-11 items-center justify-center text-bone/85 hover:text-champagne">
@@ -118,7 +119,10 @@ export function SiteHeader() {
           className={`absolute inset-y-0 left-0 flex w-[min(88vw,420px)] flex-col bg-obsidian px-6 pb-8 pt-5 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${open ? "translate-x-0" : "-translate-x-full"}`}
         >
           <div className="flex items-center justify-between">
-            <span className="font-serif text-xl tracking-[0.22em]">VANTE</span>
+            <span className="flex items-center gap-2.5 font-serif text-xl tracking-[0.22em]">
+              <EmblemIcon className="h-7 w-auto" />
+              VÄNTÉ
+            </span>
             <button type="button" aria-label="Close navigation" onClick={() => setOpen(false)} className="flex h-11 w-11 items-center justify-center">
               <CloseIcon />
             </button>

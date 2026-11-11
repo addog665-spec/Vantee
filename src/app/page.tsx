@@ -10,14 +10,14 @@ const drops = collections.filter((c) => c.drop);
 const chapterPieces = products.filter((p) => !getCollection(p.collection)?.drop);
 
 const archive = [
-  { src: "/images/official/campaign/campaign-harbor-04.jpg", alt: "VANTE group campaign at the harbor", className: "col-span-2 row-span-2 md:col-span-4" },
-  { src: "/images/official/editorial/editorial-staircase-02.jpg", alt: "VANTE campaign on the staircase", className: "col-span-2 row-span-2" },
-  { src: "/images/official/editorial/editorial-architecture-01.jpg", alt: "VANTE portrait in architecture", className: "col-span-1 row-span-2 md:col-span-2" },
+  { src: "/images/official/campaign/campaign-harbor-04.jpg", alt: "VÄNTÉ group campaign at the harbor", className: "col-span-2 row-span-2 md:col-span-4" },
+  { src: "/images/official/editorial/editorial-staircase-02.jpg", alt: "VÄNTÉ campaign on the staircase", className: "col-span-2 row-span-2" },
+  { src: "/images/official/editorial/editorial-architecture-01.jpg", alt: "VÄNTÉ portrait in architecture", className: "col-span-1 row-span-2 md:col-span-2" },
   { quote: "Form is never separate from feeling.", className: "col-span-1 row-span-2 md:col-span-4" },
-  { src: "/images/official/editorial/editorial-red-01.jpg", alt: "VANTE red mailbox campaign portrait", className: "col-span-1 row-span-2 md:col-span-2" },
-  { src: "/images/official/campaign/campaign-story-01.jpg", alt: "VANTE campaign at the breakwater", className: "col-span-1 row-span-2 md:col-span-4" },
-  { src: "/images/official/editorial/editorial-staircase-01.jpg", alt: "VANTE group campaign on the staircase", className: "col-span-2 row-span-2 md:col-span-3" },
-  { src: "/images/official/editorial/editorial-red-02.jpg", alt: "VANTE burgundy jersey portrait", className: "col-span-1 row-span-2 md:col-span-1" },
+  { src: "/images/official/editorial/editorial-red-01.jpg", alt: "VÄNTÉ red mailbox campaign portrait", className: "col-span-1 row-span-2 md:col-span-2" },
+  { src: "/images/official/campaign/campaign-story-01.jpg", alt: "VÄNTÉ campaign at the breakwater", className: "col-span-1 row-span-2 md:col-span-4" },
+  { src: "/images/official/editorial/editorial-staircase-01.jpg", alt: "VÄNTÉ group campaign on the staircase", className: "col-span-2 row-span-2 md:col-span-3" },
+  { src: "/images/official/editorial/editorial-red-02.jpg", alt: "VÄNTÉ burgundy jersey portrait", className: "col-span-1 row-span-2 md:col-span-1" },
   { quote: "Made to be noticed slowly.", className: "col-span-1 row-span-2 md:col-span-2" },
 ];
 
@@ -28,7 +28,7 @@ export default function Home() {
       <section className="grain relative flex min-h-[100svh] items-end overflow-hidden bg-[#090909]">
         <Image
           src="/images/official/hero/hero-main.jpg"
-          alt="VANTE launch campaign at the red mailboxes"
+          alt="VÄNTÉ launch campaign at the red mailboxes"
           fill
           priority
           sizes="100vw"
@@ -51,13 +51,13 @@ export default function Home() {
       <section className="on-light bg-bone text-ink">
         <div className="page-frame page-section grid gap-10 md:grid-cols-[1fr_minmax(0,22rem)] md:items-end">
           <div data-reveal>
-            <p className="eyebrow">The VANTE point of view</p>
+            <p className="eyebrow">The VÄNTÉ point of view</p>
             <p className="display mt-8 max-w-[18ch] text-[clamp(2.6rem,6vw,5.75rem)] leading-[1.02]">
               Luxury is not loud. It is remembered. Every thread has purpose. Every silhouette begins with intention.
             </p>
           </div>
           <p data-reveal className="text-[0.95rem] leading-7 text-ink/70">
-            VANTE makes fewer, better things. Our work begins with the discipline of editing, and ends in pieces that become more personal as they are worn.
+            VÄNTÉ makes fewer, better things. Our work begins with the discipline of editing, and ends in pieces that become more personal as they are worn.
           </p>
         </div>
       </section>
@@ -77,10 +77,10 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 gap-4 self-center" data-reveal>
             <div className="relative aspect-[3/4] translate-y-8 overflow-hidden">
-              <Image src="/images/official/hero/hero-editorial.jpg" alt="VANTE launch campaign portrait" fill sizes="(min-width: 1024px) 20vw, 45vw" className="object-cover" />
+              <Image src="/images/official/hero/hero-editorial.jpg" alt="VÄNTÉ launch campaign portrait" fill sizes="(min-width: 1024px) 20vw, 45vw" className="object-cover" />
             </div>
             <div className="relative aspect-[3/4] overflow-hidden">
-              <Image src="/images/official/hero/hero-secondary.jpg" alt="VANTE launch campaign portrait at the red mailboxes" fill sizes="(min-width: 1024px) 20vw, 45vw" className="object-cover" />
+              <Image src="/images/official/hero/hero-secondary.jpg" alt="VÄNTÉ launch campaign portrait at the red mailboxes" fill sizes="(min-width: 1024px) 20vw, 45vw" className="object-cover" />
             </div>
           </div>
         </div>

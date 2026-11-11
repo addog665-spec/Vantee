@@ -7,8 +7,8 @@ export const siteUrl = (
 export const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
 
 export const site = {
-  name: "VANTE",
-  title: "VANTE | Quiet Confidence",
+  name: "VÄNTÉ",
+  title: "VÄNTÉ | Quiet Confidence",
   description: "A modern luxury wardrobe, designed with quiet confidence.",
   ogImage: "/images/official/hero/hero-main.jpg",
 };

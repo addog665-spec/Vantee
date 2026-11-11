@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ProductGrid } from "@/components/product-card";
 import { ProductDetail } from "@/components/product-detail";
-import { collectionName, getProduct, products } from "@/lib/catalog";
+import { ShopTheLook } from "@/components/shop-the-look";
+import { collectionName, getProduct, lookFor, products } from "@/lib/catalog";
 import { siteUrl } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: PageProps<"/products/[slug]">
     title: product.name,
     description: product.description,
     alternates: { canonical: `/products/${product.slug}` },
-    openGraph: { title: `${product.name} | VANTE`, description: product.description, images: [product.images[0].src] },
+    openGraph: { title: `${product.name} | VÄNTÉ`, description: product.description, images: [product.images[0].src] },
   };
 }
 
@@ -27,7 +28,8 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
   const product = getProduct((await params).slug);
   if (!product) notFound();
   const label = collectionName(product.collection);
-  const related = products.filter((p) => p.slug !== product.slug).slice(0, 3);
+  const look = lookFor(product.slug);
+  const related = products.filter((p) => p.slug !== product.slug && !look?.pieces.includes(p.slug)).slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -37,7 +39,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
     image: product.images.map((i) => `${siteUrl}${i.src}`),
     sku: product.id,
     color: product.color,
-    brand: { "@type": "Brand", name: "VANTE" },
+    brand: { "@type": "Brand", name: "VÄNTÉ" },
     offers: {
       "@type": "Offer",
       url: `${siteUrl}/products/${product.slug}`,
@@ -60,6 +62,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
           <ProductDetail product={product} collectionLabel={label} />
         </div>
       </div>
+      {look && <ShopTheLook look={look} current={product.slug} />}
       <section className="border-t border-white/12 bg-[#11110f] py-20">
         <div className="page-frame">
           <p className="eyebrow">Continue the chapter</p>

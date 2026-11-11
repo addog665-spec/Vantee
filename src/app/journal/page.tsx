@@ -6,7 +6,7 @@ import { journalEntries } from "@/lib/journal";
 
 export const metadata: Metadata = {
   title: "Journal",
-  description: "Observations from inside the VANTE house and beyond it.",
+  description: "Observations from inside the VÄNTÉ house and beyond it.",
   alternates: { canonical: "/journal" },
 };
 
@@ -14,11 +14,11 @@ export default function JournalPage() {
   return (
     <>
       <PageHero
-        eyebrow="VANTE Journal"
+        eyebrow="VÄNTÉ Journal"
         title="The thoughtful part."
         intro="Observations from inside the house and beyond it."
         image="/images/official/editorial/editorial-architecture-02.jpg"
-        imageAlt="VANTE portrait in architecture"
+        imageAlt="VÄNTÉ portrait in architecture"
       />
       <section className="on-light bg-ivory py-20 text-ink">
         <div className="page-frame grid gap-14 md:grid-cols-3 md:gap-6">
