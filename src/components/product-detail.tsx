@@ -107,10 +107,12 @@ export function ProductDetail({ product, collectionLabel }: { product: Product; 
           </div>
         ) : (
           <button type="button" onClick={add} disabled={!product.inStock} className="btn btn-solid mt-5 h-14 w-full">
-            {product.inStock ? "Add to bag" : "Sold out"}
+            {!product.inStock ? "Sold out" : product.preorder ? "Pre-order" : "Add to bag"}
           </button>
         )}
-        <p className="mt-4 text-center text-xs text-bone/50">In stock. Usually dispatches within 1 business day.</p>
+        <p className="mt-4 text-center text-xs text-bone/50">
+          {product.preorder ? "Pre-order. Reserve yours now; it ships as soon as the drop is ready." : "In stock. Usually dispatches within 1 business day."}
+        </p>
 
         <div className="mt-8 divide-y divide-white/12 border-y border-white/12">
           <details open className="group py-1">

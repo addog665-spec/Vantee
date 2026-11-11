@@ -11,6 +11,8 @@ export type Product = {
   details: string[];
   sizes: string[];
   inStock: boolean;
+  /** Sold ahead of release: shown as "Pre-order" and shipped once the drop is ready. */
+  preorder?: boolean;
   edition?: string;
 };
 
@@ -56,11 +58,11 @@ export const collections: Collection[] = [
     tagline: "The VÄNTÉ name, in black on white rib.",
     image: "/images/official/drops/signature-look-park-4x5.jpg",
     heroImage: "/images/official/drops/signature-banner.jpg",
-    imageAlt: "The Signature Rib Tank cropped, with the Signature Snap Short",
+    imageAlt: "The Signature Rib Tank with the Signature Snap Short",
     drop: true,
-    video: { src: "/videos/signature-drop.mp4", poster: "/images/official/drops/signature-video-poster.jpg" },
+    video: { src: "/videos/signature-drop-sound.mp4", poster: "/images/official/drops/signature-video-poster.jpg" },
     gallery: [
-      { src: "/images/official/drops/signature-look-park.jpg", alt: "The Signature Rib Tank cropped, with the Signature Snap Short and heels" },
+      { src: "/images/official/drops/signature-look-park.jpg", alt: "The Signature Rib Tank with the Signature Snap Short and heels" },
       { src: "/images/official/drops/signature-look-plaza.jpg", alt: "The Signature Rib Tank and Signature Snap Short with white socks and trainers" },
       { src: "/images/official/drops/signature-crop-tank.jpg", alt: "The VÄNTÉ script and figure emblem on the Signature Rib Tank" },
     ],
@@ -182,14 +184,15 @@ export const products: Product[] = [
     images: [
       { src: photo("drops/signature-tank-worn"), alt: "Signature Rib Tank in white with the VÄNTÉ script, figure emblem and black flower" },
       { src: photo("drops/signature-crop-tank"), alt: "Close-up of the VÄNTÉ script and figure emblem on the Signature Rib Tank" },
-      { src: photo("drops/signature-look-park-4x5"), alt: "The Signature Rib Tank worn cropped with the Signature Snap Short" },
+      { src: photo("drops/signature-look-park-4x5"), alt: "The Signature Rib Tank worn with the Signature Snap Short" },
       { src: photo("drops/signature-look-plaza-4x5"), alt: "The Signature Rib Tank and Signature Snap Short, full look" },
     ],
     description: "A close-fitting tank in white rib, with the VÄNTÉ script and figure emblem in black at the chest and a black flower at the side.",
     details: ["White ribbed knit", "Close, body-skimming fit", "VÄNTÉ script and figure emblem in black at the chest", "Black floral print at the side"],
     sizes: ["XS", "S", "M", "L", "XL"],
     inStock: true,
-    edition: "New drop",
+    preorder: true,
+    edition: "Pre-order",
   },
   {
     id: "v-08",
@@ -208,7 +211,8 @@ export const products: Product[] = [
     details: ["Heather grey sweat fabric", "Elasticated drawstring waist", "Black snap buttons down the side", "VÄNTÉ figure emblem at the front"],
     sizes: ["XS", "S", "M", "L", "XL"],
     inStock: true,
-    edition: "New drop",
+    preorder: true,
+    edition: "Pre-order",
   },
   {
     id: "v-07",

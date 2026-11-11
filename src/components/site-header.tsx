@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { BagIcon, CloseIcon, EmblemIcon, HeartIcon, MenuIcon, SearchIcon } from "@/components/icons";
+import { BagIcon, CloseIcon, EmblemIcon, HeartIcon, MenuIcon, SearchIcon, UserIcon } from "@/components/icons";
 import { useStore } from "@/lib/store";
 
 const primary = [
@@ -89,6 +89,9 @@ export function SiteHeader() {
             >
               <HeartIcon />
             </Link>
+            <Link href="/account" aria-label="Account" className="hidden h-11 w-11 items-center justify-center text-bone/85 hover:text-champagne sm:flex">
+              <UserIcon />
+            </Link>
             <Link href="/bag" aria-label={`Bag, ${count} ${count === 1 ? "item" : "items"}`} className="relative flex h-11 w-11 items-center justify-center text-bone/85 hover:text-champagne">
               <BagIcon />
               {count > 0 && (
@@ -131,6 +134,7 @@ export function SiteHeader() {
           </nav>
           <div className="mt-auto flex gap-6 pt-8 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-bone/70">
             <Link href="/wishlist">Wishlist ({wishlist.length})</Link>
+            <Link href="/account">Account</Link>
           </div>
         </div>
       </div>

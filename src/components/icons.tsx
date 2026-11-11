@@ -27,6 +27,9 @@ export const HeartIcon = ({ className = "h-[18px] w-[18px]", filled }: IconProps
     <path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z" />
   </svg>
 );
+export const UserIcon = ({ className = "h-[18px] w-[18px]" }: IconProps) => (
+  <svg {...base} className={className}><circle cx="12" cy="8.5" r="3.5" /><path d="M5 20c1.2-3.6 3.8-5.5 7-5.5s5.8 1.9 7 5.5" /></svg>
+);
 export const ArrowIcon = ({ className = "h-3.5 w-3.5" }: IconProps) => (
   <svg {...base} className={className}><path d="M7 17L17 7M8 7h9v9" /></svg>
 );

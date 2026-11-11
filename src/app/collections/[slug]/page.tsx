@@ -53,7 +53,7 @@ export default async function CollectionPage({ params }: PageProps<"/collections
               <p className="mt-6 max-w-sm text-sm leading-6 text-bone/65">{collection.tagline}</p>
             </div>
             <div className="relative mx-auto aspect-[9/16] w-full max-w-sm overflow-hidden bg-graphite" data-reveal>
-              <LoopVideo src={collection.video.src} poster={collection.video.poster} label={`${collection.name} drop video`} className="absolute inset-0 h-full w-full object-cover" />
+              <LoopVideo src={collection.video.src} poster={collection.video.poster} label={`${collection.name} drop video`} className="absolute inset-0 h-full w-full object-cover" withSound />
             </div>
           </div>
         </section>

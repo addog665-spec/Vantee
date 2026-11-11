@@ -45,7 +45,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
       url: `${siteUrl}/products/${product.slug}`,
       price: product.price,
       priceCurrency: "USD",
-      availability: product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+      availability: !product.inStock ? "https://schema.org/OutOfStock" : product.preorder ? "https://schema.org/PreOrder" : "https://schema.org/InStock",
     },
   };
 

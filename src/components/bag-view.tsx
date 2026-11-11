@@ -67,7 +67,7 @@ export function BagView() {
               <div className="flex justify-between gap-4">
                 <div>
                   <Link href={`/products/${product.slug}`} className="font-serif text-2xl hover:text-champagne">{product.name}</Link>
-                  <p className="mt-1 text-xs text-bone/55">{product.color} / Size {size}</p>
+                  <p className="mt-1 text-xs text-bone/55">{product.color} / Size {size}{product.preorder ? " / Pre-order" : ""}</p>
                 </div>
                 <p className="text-sm">{formatPrice(product.price * qty)}</p>
               </div>

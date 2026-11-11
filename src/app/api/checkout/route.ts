@@ -43,7 +43,7 @@ export async function POST(request: Request) {
         unit_amount: product.price * 100,
         product_data: {
           name: product.name,
-          description: `Size ${line.size} / ${product.color}`,
+          description: `Size ${line.size} / ${product.color}${product.preorder ? " / Pre-order: ships when the drop is ready" : ""}`,
           images: [`${siteUrl}${product.images[0].src}`],
           metadata: { slug: product.slug, size: String(line.size) },
         },
