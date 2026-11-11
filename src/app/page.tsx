@@ -3,8 +3,11 @@ import Link from "next/link";
 import { ArrowIcon } from "@/components/icons";
 import { NewsletterForm } from "@/components/newsletter-form";
 import { ProductCard } from "@/components/product-card";
-import { products } from "@/lib/catalog";
+import { collections, getCollection, products } from "@/lib/catalog";
 import { journalEntries } from "@/lib/journal";
+
+const drops = collections.filter((c) => c.drop);
+const chapterPieces = products.filter((p) => !getCollection(p.collection)?.drop);
 
 const archive = [
   { src: "/images/official/campaign/campaign-harbor-04.jpg", alt: "VANTE group campaign at the harbor", className: "col-span-2 row-span-2 md:col-span-4" },
@@ -95,11 +98,38 @@ export default function Home() {
           </div>
         </div>
         <div className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[clamp(1rem,4vw,4.5rem)] sm:grid sm:grid-cols-2 sm:overflow-visible lg:mx-auto lg:max-w-[1520px] lg:grid-cols-4 lg:gap-5">
-          {products.map((p) => (
+          {chapterPieces.map((p) => (
             <div key={p.slug} className="w-[78vw] shrink-0 snap-start sm:w-auto">
               <ProductCard product={p} />
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Drops */}
+      <section className="border-t border-white/10 bg-obsidian pb-[clamp(4.5rem,9vw,8rem)] pt-[clamp(4rem,8vw,7rem)]">
+        <div className="page-frame">
+          <div className="flex flex-wrap items-end justify-between gap-6" data-reveal>
+            <div>
+              <p className="eyebrow">Latest drops</p>
+              <h2 className="display mt-5 text-[clamp(3rem,7vw,7rem)]">Each one, its own story.</h2>
+            </div>
+            <Link href="/collections" className="btn">Shop all drops <ArrowIcon /></Link>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {drops.map((d) => (
+              <Link key={d.slug} href={`/collections/${d.slug}`} className="group relative block aspect-[4/5] overflow-hidden bg-graphite" data-reveal>
+                <Image src={d.image} alt={d.imageAlt} fill sizes="(min-width: 768px) 32vw, 100vw" className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-[1.04]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-6">
+                  <p className="eyebrow">New drop</p>
+                  <h3 className="mt-3 font-serif text-4xl text-bone">{d.name}</h3>
+                  <p className="mt-2 max-w-xs text-sm leading-6 text-bone/75">{d.tagline}</p>
+                  <span className="link-line mt-5 inline-block">Shop the drop</span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

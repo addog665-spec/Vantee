@@ -6,7 +6,7 @@ import { products } from "@/lib/catalog";
 
 export const metadata: Metadata = {
   title: "Collections",
-  description: "The VANTE wardrobe: jerseys, denim, and a weekend bag, edited as a whole and designed to be claimed individually.",
+  description: "The VANTE wardrobe: jerseys, tees, denim, and a weekend bag, from the core collection and each new drop.",
   alternates: { canonical: "/collections" },
 };
 

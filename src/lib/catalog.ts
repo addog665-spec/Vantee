@@ -14,7 +14,7 @@ export type Product = {
   edition?: string;
 };
 
-export type CollectionSlug = "chapter-01" | "essentials" | "after-dark";
+export type CollectionSlug = "chapter-01" | "essentials" | "advantage-club" | "signature" | "bloom" | "after-dark";
 
 export type Collection = {
   slug: CollectionSlug;
@@ -22,11 +22,18 @@ export type Collection = {
   tagline: string;
   image: string;
   imageAlt: string;
+  /** Wide banner for the collection page when the card image is too tall to crop well. */
+  heroImage?: string;
+  /** Standalone releases, featured together on the homepage. */
+  drop?: boolean;
 };
 
 export const collections: Collection[] = [
   { slug: "chapter-01", name: "Chapter 01", tagline: "Where the story begins.", image: "/images/official/campaign/campaign-harbor-01.jpg", imageAlt: "VANTE Chapter 01 campaign at the harbor" },
   { slug: "essentials", name: "Essentials", tagline: "The pieces you reach for first.", image: "/images/official/campaign/campaign-harbor-03.jpg", imageAlt: "VANTE Essentials campaign at the harbor" },
+  { slug: "advantage-club", name: "Advantage Club", tagline: "A postcard from St. Vänté, worn on a ringer tee.", image: "/images/official/drops/advantage-club-tee-front.jpg", heroImage: "/images/official/drops/advantage-club-hero.jpg", imageAlt: "The St. Vänté Advantage Club Tee and its seaside window graphic", drop: true },
+  { slug: "signature", name: "Signature", tagline: "The VANTE name, in black on white rib.", image: "/images/official/drops/signature-crop-tank.jpg", imageAlt: "The Signature Crop Tank worn with denim", drop: true },
+  { slug: "bloom", name: "Bloom", tagline: "Script and flowers on white and burgundy.", image: "/images/official/drops/bloom-raglan-tee.jpg", imageAlt: "Bloom Raglan Tees laid out in the sun", drop: true },
   { slug: "after-dark", name: "After Dark", tagline: "A considered evening uniform.", image: "/images/official/hero/hero-secondary.jpg", imageAlt: "VANTE campaign portrait at the red mailboxes" },
 ];
 
@@ -109,6 +116,58 @@ export const products: Product[] = [
     details: ["Brown grained finish", "Twin carry handles", "Sized for a weekend away"],
     sizes: ["One size"],
     inStock: true,
+  },
+  {
+    id: "v-05",
+    slug: "advantage-club-tee",
+    name: "St. Vänté Advantage Club Tee",
+    collection: "advantage-club",
+    price: 85,
+    color: "Cream",
+    colorHex: "#ece4d6",
+    images: [
+      { src: photo("drops/advantage-club-tee-front"), alt: "Front of the St. Vänté Advantage Club Tee with its seaside window graphic" },
+      { src: photo("drops/advantage-club-tee-back"), alt: "Back of the St. Vänté Advantage Club Tee with the VANTE figure emblem" },
+    ],
+    description: "A cream ringer tee with an open window onto the sea: blue shutters, bougainvillea, and a table set for two at St. Vänté.",
+    details: ["Cream body with blue ringer collar and cuffs", "St. Vänté Advantage Club window graphic on the front", "VANTE figure emblem below the back collar"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    inStock: true,
+    edition: "New drop",
+  },
+  {
+    id: "v-06",
+    slug: "signature-crop-tank",
+    name: "Signature Crop Tank",
+    collection: "signature",
+    price: 60,
+    color: "White",
+    colorHex: "#f4f2ee",
+    images: [{ src: photo("drops/signature-crop-tank"), alt: "Signature Crop Tank in white rib with the VANTE script and figure emblem" }],
+    description: "A cropped, close-fitting tank in white rib, with the VANTE script and figure emblem in black at the chest.",
+    details: ["White ribbed knit", "Cropped, close fit", "VANTE script and figure emblem in black at the chest", "Black floral detail at the hem"],
+    sizes: ["XS", "S", "M", "L"],
+    inStock: true,
+    edition: "New drop",
+  },
+  {
+    id: "v-07",
+    slug: "bloom-raglan-tee",
+    name: "Bloom Raglan Tee",
+    collection: "bloom",
+    price: 75,
+    color: "White / Burgundy",
+    colorHex: "#7a1f3d",
+    images: [
+      { src: photo("drops/bloom-raglan-tee"), alt: "Bloom Raglan Tees in white with burgundy sleeves, laid out in the sun" },
+      { src: photo("drops/bloom-raglan-tee-yellow-bloom"), alt: "Vänte script and yellow flower print on the Bloom Raglan Tee" },
+      { src: photo("drops/bloom-raglan-tee-black-bloom"), alt: "Vänte script and black flower print on the Bloom Raglan Tee" },
+    ],
+    description: "A white raglan tee with burgundy sleeves, the Vänte script across the body, and a hand-drawn flower in full bloom.",
+    details: ["White body with burgundy raglan sleeves", "Vänte script across the body", "Floral print"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    inStock: true,
+    edition: "New drop",
   },
 ];
 

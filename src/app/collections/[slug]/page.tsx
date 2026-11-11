@@ -25,7 +25,7 @@ export default async function CollectionPage({ params }: PageProps<"/collections
 
   return (
     <>
-      <PageHero eyebrow="Collection" title={collection.name} intro={collection.tagline} image={collection.image} imageAlt={collection.imageAlt} />
+      <PageHero eyebrow="Collection" title={collection.name} intro={collection.tagline} image={collection.heroImage ?? collection.image} imageAlt={collection.imageAlt} />
       <section className="bg-obsidian pb-24 pt-10">
         <div className="page-frame">
           <CollectionTabs active={collection.slug} />
