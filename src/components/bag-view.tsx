@@ -72,7 +72,7 @@ export function BagView() {
                 <p className="text-sm">{formatPrice(product.price * qty)}</p>
               </div>
               <div className="mt-auto flex items-center justify-between pt-4">
-                <div className="flex items-center border border-white/20">
+                <div className="glass flex items-center">
                   <button type="button" aria-label={`Decrease quantity of ${product.name}`} onClick={() => bag.setQty(product.slug, size, qty - 1)} className="flex h-10 w-10 items-center justify-center hover:text-champagne">
                     <MinusIcon />
                   </button>

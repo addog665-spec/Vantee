@@ -27,7 +27,7 @@ export function NewsletterForm() {
 
   return (
     <form onSubmit={onSubmit} className="w-full max-w-md">
-      <div className="flex border-b border-white/35 focus-within:border-champagne">
+      <div className="flex items-center gap-3 border-b border-white/35 focus-within:border-champagne">
         <label htmlFor="newsletter-email" className="sr-only">Email address</label>
         <input
           id="newsletter-email"
@@ -38,7 +38,7 @@ export function NewsletterForm() {
           placeholder="Your email address"
           className="min-w-0 flex-1 bg-transparent py-3 text-base outline-none placeholder:text-bone/40"
         />
-        <button type="submit" disabled={status === "sending"} className="px-1 text-[0.7rem] font-bold uppercase tracking-[0.16em] text-champagne disabled:opacity-50">
+        <button type="submit" disabled={status === "sending"} className="btn btn-solid mb-2 min-h-10 shrink-0 px-5">
           {status === "sending" ? "Joining" : "Join"}
         </button>
       </div>

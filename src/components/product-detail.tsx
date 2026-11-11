@@ -64,7 +64,7 @@ export function ProductDetail({ product, collectionLabel }: { product: Product; 
             <p className="eyebrow">{collectionLabel}{product.edition ? ` / ${product.edition}` : ""}</p>
             <h1 className="display mt-3 text-[clamp(2.8rem,6vw,4.25rem)]">{product.name}</h1>
           </div>
-          <WishlistButton slug={product.slug} name={product.name} className="border border-white/20" />
+          <WishlistButton slug={product.slug} name={product.name} />
         </div>
         <p className="mt-5 text-lg text-bone/90">{formatPrice(product.price)}</p>
         <p className="mt-6 max-w-md text-sm leading-6 text-bone/65">{product.description}</p>
@@ -90,7 +90,7 @@ export function ProductDetail({ product, collectionLabel }: { product: Product; 
                   setAdded(false);
                 }}
                 aria-pressed={size === s}
-                className={`h-11 border text-xs transition-colors ${size === s ? "border-champagne bg-champagne text-ink" : "border-white/20 text-bone hover:border-white/60"}`}
+                className={`glass h-11 text-xs transition-colors ${size === s ? "border-champagne text-champagne" : "hover:border-white/35"}`}
               >
                 {s}
               </button>

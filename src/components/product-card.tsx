@@ -27,7 +27,7 @@ export function ProductCard({ product, priority = false }: { product: Product; p
             />
           )}
           {product.edition && (
-            <span className="absolute left-3 top-3 bg-obsidian/75 px-2.5 py-1 text-[0.58rem] font-bold uppercase tracking-[0.14em] backdrop-blur">
+            <span className="glass absolute left-3 top-3 px-2.5 py-1 text-[0.58rem] font-bold uppercase tracking-[0.14em]">
               {product.edition}
             </span>
           )}
@@ -45,7 +45,7 @@ export function ProductCard({ product, priority = false }: { product: Product; p
           <p className="shrink-0 text-sm text-bone/85">{formatPrice(product.price)}</p>
         </div>
       </Link>
-      <WishlistButton slug={product.slug} name={product.name} className="absolute right-2 top-2 bg-obsidian/60 backdrop-blur" />
+      <WishlistButton slug={product.slug} name={product.name} className="absolute right-2 top-2" />
     </article>
   );
 }

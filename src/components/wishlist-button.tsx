@@ -11,7 +11,7 @@ export function WishlistButton({ slug, name, className = "" }: { slug: string; n
       onClick={() => wishlist.toggle(slug)}
       aria-pressed={saved}
       aria-label={saved ? `Remove ${name} from wishlist` : `Save ${name} to wishlist`}
-      className={`flex h-10 w-10 items-center justify-center transition-colors ${saved ? "text-champagne" : "text-bone hover:text-champagne"} ${className}`}
+      className={`glass flex h-10 w-10 items-center justify-center transition-colors hover:border-white/35 ${saved ? "text-champagne" : "text-bone hover:text-champagne"} ${className}`}
     >
       <HeartIcon filled={saved} />
     </button>

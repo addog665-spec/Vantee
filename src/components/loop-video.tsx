@@ -42,7 +42,7 @@ export function LoopVideo({ src, poster, label, className = "", withSound = fals
           type="button"
           onClick={toggleSound}
           aria-pressed={!muted}
-          className="absolute bottom-4 right-4 flex h-11 items-center gap-2 border border-white/30 bg-black/55 px-4 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-bone backdrop-blur hover:border-white/70"
+          className="glass absolute bottom-4 right-4 flex h-11 items-center gap-2 px-4 text-[0.62rem] font-bold uppercase tracking-[0.14em] hover:border-white/35 hover:text-champagne"
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden className="h-4 w-4">
             <path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" />
