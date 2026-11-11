@@ -37,7 +37,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/40" />
         <div className="page-frame relative w-full pb-16 pt-32 sm:pb-24">
           <p className="eyebrow">Chapter 01 / 2026</p>
-          <h1 className="display mt-5 max-w-[12ch] text-[clamp(3.6rem,10vw,10rem)] text-bone">Designed for quiet confidence.</h1>
+          <h1 className="display mt-5 max-w-[12ch] text-[clamp(3.6rem,10vw,10rem)] text-bone">Wear Your Advantage.</h1>
           <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
             <Link href="/collections" className="btn btn-solid">
               Shop the collection <ArrowIcon />
@@ -51,14 +51,17 @@ export default function Home() {
       <section className="on-light bg-bone text-ink">
         <div className="page-frame page-section grid gap-10 md:grid-cols-[1fr_minmax(0,22rem)] md:items-end">
           <div data-reveal>
-            <p className="eyebrow">The VÄNTÉ point of view</p>
+            <p className="eyebrow">More than fashion</p>
             <p className="display mt-8 max-w-[18ch] text-[clamp(2.6rem,6vw,5.75rem)] leading-[1.02]">
-              Luxury is not loud. It is remembered. Every thread has purpose. Every silhouette begins with intention.
+              The art of turning adversity into advantage.
             </p>
           </div>
-          <p data-reveal className="text-[0.95rem] leading-7 text-ink/70">
-            VÄNTÉ makes fewer, better things. Our work begins with the discipline of editing, and ends in pieces that become more personal as they are worn.
-          </p>
+          <div data-reveal>
+            <p className="text-[0.95rem] leading-7 text-ink/70">
+              VÄNTÉ exists for those who refuse to be defined by where they started. Every collection is a reminder that challenges are not the end of the story — they are often the beginning.
+            </p>
+            <Link href="/story" className="link-line mt-6 inline-block">Read our story</Link>
+          </div>
         </div>
       </section>
 

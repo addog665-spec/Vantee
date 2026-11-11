@@ -26,12 +26,29 @@ export type Collection = {
   heroImage?: string;
   /** Standalone releases, featured together on the homepage. */
   drop?: boolean;
+  /** Photos from the drop's shoot, shown under its pieces. */
+  gallery?: { src: string; alt: string }[];
 };
 
 export const collections: Collection[] = [
   { slug: "chapter-01", name: "Chapter 01", tagline: "Where the story begins.", image: "/images/official/campaign/campaign-harbor-01.jpg", imageAlt: "VÄNTÉ Chapter 01 campaign at the harbor" },
   { slug: "essentials", name: "Essentials", tagline: "The pieces you reach for first.", image: "/images/official/campaign/campaign-harbor-03.jpg", imageAlt: "VÄNTÉ Essentials campaign at the harbor" },
-  { slug: "advantage-club", name: "Advantage Club", tagline: "A postcard from St. Vänté, worn on a ringer tee.", image: "/images/official/drops/advantage-club-tee-front.jpg", heroImage: "/images/official/drops/advantage-club-hero.jpg", imageAlt: "The St. Vänté Advantage Club Tee and its seaside window graphic", drop: true },
+  {
+    slug: "advantage-club",
+    name: "Advantage Club",
+    tagline: "A postcard from St. Vänté, worn on a ringer tee.",
+    image: "/images/official/drops/advantage-club-tile.jpg",
+    heroImage: "/images/official/drops/advantage-club-banner.jpg",
+    imageAlt: "Three friends in the St. Vänté Advantage Club Tee around a red chair",
+    drop: true,
+    gallery: [
+      { src: "/images/official/drops/advantage-club-group-chair.jpg", alt: "Three friends in the St. Vänté Advantage Club Tee around a red chair" },
+      { src: "/images/official/drops/advantage-club-group-lounge.jpg", alt: "The St. Vänté Advantage Club Tee worn three ways on the landing" },
+      { src: "/images/official/drops/advantage-club-solo-seated.jpg", alt: "The St. Vänté Advantage Club Tee with denim shorts and heels" },
+      { src: "/images/official/drops/advantage-club-reclined-01.jpg", alt: "The St. Vänté Advantage Club Tee with wide-leg jeans in the red chair" },
+      { src: "/images/official/drops/advantage-club-reclined-02.jpg", alt: "Lounging in the red chair in the St. Vänté Advantage Club Tee" },
+    ],
+  },
   { slug: "signature", name: "Signature", tagline: "The VÄNTÉ name, in black on white rib.", image: "/images/official/drops/signature-crop-tank.jpg", imageAlt: "The Signature Crop Tank worn with denim", drop: true },
   { slug: "bloom", name: "Bloom", tagline: "Script and flowers on white and burgundy.", image: "/images/official/drops/bloom-raglan-tee.jpg", imageAlt: "Bloom Raglan Tees laid out in the sun", drop: true },
   { slug: "after-dark", name: "After Dark", tagline: "A considered evening uniform.", image: "/images/official/hero/hero-secondary.jpg", imageAlt: "VÄNTÉ campaign portrait at the red mailboxes" },
@@ -127,7 +144,11 @@ export const products: Product[] = [
     colorHex: "#ece4d6",
     images: [
       { src: photo("drops/advantage-club-tee-front"), alt: "Front of the St. Vänté Advantage Club Tee with its seaside window graphic" },
+      { src: photo("drops/advantage-club-solo-seated"), alt: "The St. Vänté Advantage Club Tee worn with denim shorts" },
       { src: photo("drops/advantage-club-tee-back"), alt: "Back of the St. Vänté Advantage Club Tee with the VÄNTÉ figure emblem" },
+      { src: photo("drops/advantage-club-group-chair"), alt: "Three friends in the St. Vänté Advantage Club Tee" },
+      { src: photo("drops/advantage-club-group-lounge"), alt: "The St. Vänté Advantage Club Tee worn three ways" },
+      { src: photo("drops/advantage-club-reclined-01"), alt: "The St. Vänté Advantage Club Tee with wide-leg jeans" },
     ],
     description: "A cream ringer tee with an open window onto the sea: blue shutters, bougainvillea, and a table set for two at St. Vänté.",
     details: ["Cream body with blue ringer collar and cuffs", "St. Vänté Advantage Club window graphic on the front", "VÄNTÉ figure emblem below the back collar"],

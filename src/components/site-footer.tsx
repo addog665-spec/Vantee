@@ -4,7 +4,7 @@ import { EmblemIcon } from "@/components/icons";
 const links = [
   { href: "/collections", label: "Collections" },
   { href: "/journal", label: "Journal" },
-  { href: "/story", label: "The House" },
+  { href: "/story", label: "Our Story" },
   { href: "/materials", label: "Materials" },
   { href: "/lookbook", label: "Lookbook" },
   { href: "/members", label: "Members" },
@@ -22,7 +22,7 @@ export function SiteFooter() {
             VÄNTÉ
           </p>
           <p className="mt-4 max-w-xs text-sm leading-6 text-bone/60">
-            A modern wardrobe shaped by restraint, purpose, and the passage of time.
+            The art of turning adversity into advantage. Wear Your Advantage.
           </p>
         </div>
         <nav aria-label="Footer" className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-4">

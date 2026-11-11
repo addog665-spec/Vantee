@@ -9,14 +9,14 @@ import { useStore } from "@/lib/store";
 const primary = [
   { href: "/collections", label: "Collections" },
   { href: "/journal", label: "Journal" },
-  { href: "/story", label: "About" },
+  { href: "/story", label: "Our Story" },
 ];
 
 const drawer = [
   { href: "/collections", label: "Collections" },
   { href: "/lookbook", label: "Lookbook" },
   { href: "/journal", label: "Journal" },
-  { href: "/story", label: "The House" },
+  { href: "/story", label: "Our Story" },
   { href: "/materials", label: "Materials" },
   { href: "/members", label: "Members" },
   { href: "/support", label: "Support" },

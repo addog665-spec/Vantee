@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CollectionTabs } from "@/components/collection-tabs";
@@ -42,6 +43,21 @@ export default async function CollectionPage({ params }: PageProps<"/collections
           )}
         </div>
       </section>
+      {collection.gallery && (
+        <section className="on-light bg-ivory py-20 text-ink sm:py-28">
+          <div className="page-frame">
+            <p className="eyebrow">From the shoot</p>
+            <h2 className="display mb-10 mt-4 text-5xl">{collection.name}, worn.</h2>
+            <div className="columns-2 gap-4 md:columns-3 [&>*]:mb-4">
+              {collection.gallery.map((img) => (
+                <div key={img.src} className="relative aspect-[3/4] break-inside-avoid overflow-hidden" data-reveal>
+                  <Image src={img.src} alt={img.alt} fill sizes="(min-width: 768px) 30vw, 50vw" className="object-cover" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }

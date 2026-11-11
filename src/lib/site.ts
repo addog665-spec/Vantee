@@ -8,7 +8,7 @@ export const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || "";
 
 export const site = {
   name: "VÄNTÉ",
-  title: "VÄNTÉ | Quiet Confidence",
-  description: "A modern luxury wardrobe, designed with quiet confidence.",
+  title: "VÄNTÉ | Wear Your Advantage",
+  description: "VÄNTÉ is more than fashion. It is the art of turning adversity into advantage. Luxury meets streetwear.",
   ogImage: "/images/official/hero/hero-main.jpg",
 };
