@@ -52,7 +52,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="bg-obsidian pb-20 pt-24 sm:pt-28">
+      <div className="pb-20 pt-24 sm:pt-28">
         <div className="page-frame">
           <nav aria-label="Breadcrumb" className="mb-6 text-[0.62rem] uppercase tracking-[0.13em] text-bone/50">
             <Link href="/collections" className="hover:text-bone">Collections</Link>
@@ -63,7 +63,7 @@ export default async function ProductPage({ params }: PageProps<"/products/[slug
         </div>
       </div>
       {look && <ShopTheLook look={look} current={product.slug} />}
-      <section className="border-t border-white/12 bg-[#11110f] py-20">
+      <section className="py-20">
         <div className="page-frame">
           <p className="eyebrow">Continue the chapter</p>
           <h2 className="display mb-10 mt-4 text-5xl">You may also like</h2>

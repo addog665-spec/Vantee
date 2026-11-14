@@ -22,7 +22,7 @@ export default async function CheckoutSuccessPage({ searchParams }: PageProps<"/
   const paid = await isPaid(typeof session_id === "string" ? session_id : undefined);
 
   return (
-    <section className="min-h-[70svh] bg-obsidian pb-24 pt-28">
+    <section className="min-h-[70svh] pb-24 pt-28">
       <div className="page-frame">
         {paid ? (
           <>

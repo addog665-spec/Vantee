@@ -28,7 +28,7 @@ export default async function CollectionPage({ params }: PageProps<"/collections
   return (
     <>
       <PageHero eyebrow="Collection" title={collection.name} intro={collection.tagline} image={collection.heroImage ?? collection.image} imageAlt={collection.imageAlt} />
-      <section className="bg-obsidian pb-24 pt-10">
+      <section className="pb-24 pt-10">
         <div className="page-frame">
           <CollectionTabs active={collection.slug} />
           {items.length ? (
@@ -45,27 +45,27 @@ export default async function CollectionPage({ params }: PageProps<"/collections
         </div>
       </section>
       {collection.video && (
-        <section className="border-t border-white/10 bg-obsidian py-20 sm:py-28">
+        <section className="border-t border-white/10 py-20 sm:py-28">
           <div className="page-frame grid items-center gap-10 md:grid-cols-[1fr_minmax(0,24rem)] md:gap-16">
             <div data-reveal>
               <p className="eyebrow">In motion</p>
               <h2 className="display mt-4 text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.02]">{collection.name}, out in the sun.</h2>
               <p className="mt-6 max-w-sm text-sm leading-6 text-bone/65">{collection.tagline}</p>
             </div>
-            <div className="relative mx-auto aspect-[9/16] w-full max-w-sm overflow-hidden bg-graphite" data-reveal>
+            <div className="relative mx-auto aspect-[9/16] w-full max-w-sm overflow-hidden rounded-[32px] bg-graphite shadow-[0_14px_38px_rgb(0_0_0/0.45)]" data-reveal>
               <LoopVideo src={collection.video.src} poster={collection.video.poster} label={`${collection.name} drop video`} className="absolute inset-0 h-full w-full object-cover" withSound />
             </div>
           </div>
         </section>
       )}
       {collection.gallery && (
-        <section className="on-light bg-ivory py-20 text-ink sm:py-28">
+        <section className="on-light float-panel my-3 bg-ivory py-20 text-ink sm:py-28">
           <div className="page-frame">
             <p className="eyebrow">From the shoot</p>
             <h2 className="display mb-10 mt-4 text-5xl">{collection.name}, worn.</h2>
             <div className="columns-2 gap-4 md:columns-3 [&>*]:mb-4">
               {collection.gallery.map((img) => (
-                <div key={img.src} className="relative aspect-[3/4] break-inside-avoid overflow-hidden" data-reveal>
+                <div key={img.src} className="relative aspect-[3/4] break-inside-avoid overflow-hidden rounded-[22px]" data-reveal>
                   <Image src={img.src} alt={img.alt} fill sizes="(min-width: 768px) 30vw, 50vw" className="object-cover" />
                 </div>
               ))}

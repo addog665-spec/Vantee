@@ -20,7 +20,7 @@ export default function CollectionsPage() {
         image="/images/official/campaign/campaign-harbor-02.jpg"
         imageAlt="VÄNTÉ campaign at the harbor"
       />
-      <section className="bg-obsidian pb-24 pt-10">
+      <section className="pb-24 pt-10">
         <div className="page-frame">
           <CollectionTabs active="all" />
           <ProductGrid products={products} />

@@ -39,7 +39,7 @@ export function ProductDetail({ product, collectionLabel }: { product: Product; 
           aria-label={`${product.name} images`}
         >
           {product.images.map((img, i) => (
-            <div key={img.src} className={`relative aspect-[4/5] w-full shrink-0 snap-center bg-graphite ${i === 0 ? "lg:col-span-2" : ""}`}>
+            <div key={img.src} className={`relative aspect-[4/5] w-full shrink-0 snap-center overflow-hidden rounded-[26px] bg-graphite shadow-[0_14px_38px_rgb(0_0_0/0.45)] ${i === 0 ? "lg:col-span-2" : ""}`}>
               <Image
                 src={img.src}
                 alt={img.alt}
@@ -90,7 +90,7 @@ export function ProductDetail({ product, collectionLabel }: { product: Product; 
                   setAdded(false);
                 }}
                 aria-pressed={size === s}
-                className={`glass h-11 text-xs transition-colors ${size === s ? "border-champagne text-champagne" : "hover:border-white/35"}`}
+                className={`glass h-11 rounded-full text-xs transition-colors ${size === s ? "border-champagne text-champagne" : "hover:border-white/35"}`}
               >
                 {s}
               </button>
@@ -114,8 +114,8 @@ export function ProductDetail({ product, collectionLabel }: { product: Product; 
           {product.preorder ? "Pre-order. Reserve yours now; it ships as soon as the drop is ready." : "In stock. Usually dispatches within 1 business day."}
         </p>
 
-        <div className="mt-8 divide-y divide-white/12 border-y border-white/12">
-          <details open className="group py-1">
+        <div className="mt-8 grid gap-2.5">
+          <details open className="glass group rounded-[20px] px-5">
             <summary className="flex cursor-pointer items-center justify-between py-4 text-[0.7rem] font-bold uppercase tracking-[0.15em]">
               Details <span className="summary-icon text-lg transition-transform">+</span>
             </summary>
@@ -123,13 +123,13 @@ export function ProductDetail({ product, collectionLabel }: { product: Product; 
               {product.details.map((d) => <li key={d}>{d}</li>)}
             </ul>
           </details>
-          <details id="size-fit" className="py-1">
+          <details id="size-fit" className="glass rounded-[20px] px-5">
             <summary className="flex cursor-pointer items-center justify-between py-4 text-[0.7rem] font-bold uppercase tracking-[0.15em]">
               Size &amp; fit <span className="summary-icon text-lg transition-transform">+</span>
             </summary>
             <p className="pb-5 text-sm leading-6 text-bone/65">{sizeAndFit}</p>
           </details>
-          <details className="py-1">
+          <details className="glass rounded-[20px] px-5">
             <summary className="flex cursor-pointer items-center justify-between py-4 text-[0.7rem] font-bold uppercase tracking-[0.15em]">
               Delivery &amp; returns <span className="summary-icon text-lg transition-transform">+</span>
             </summary>

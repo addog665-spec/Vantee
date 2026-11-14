@@ -33,7 +33,7 @@ export default function SupportPage() {
         image="/images/official/backgrounds/campaign-boat-01.jpg"
         imageAlt="VÄNTÉ campaign at the harbor"
       />
-      <section className="bg-obsidian py-20">
+      <section className="py-20">
         <div className="page-frame grid gap-12 lg:grid-cols-[1fr_22rem]">
           <div className="divide-y divide-white/12 border-y border-white/12">
             {faqs.map((f) => (
