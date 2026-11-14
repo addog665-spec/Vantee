@@ -2,7 +2,7 @@ import { PlainHeader } from "@/components/page-hero";
 
 export function LegalPage({ title, sections }: { title: string; sections: { heading: string; text: string }[] }) {
   return (
-    <section className="on-light float-panel mt-24 min-h-[70svh] bg-ivory pb-24 pt-16 text-ink">
+    <section className="on-light min-h-[70svh] bg-ivory pb-24 pt-32 text-ink">
       <div className="page-frame">
         <PlainHeader eyebrow="Last updated May 2026" title={title} light />
         <div className="mt-14 max-w-3xl divide-y divide-ink/15 border-y border-ink/15">

@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "Search", alternates: { canonical: "/
 
 export default function SearchPage() {
   return (
-    <section className="min-h-[70svh] pb-24 pt-28">
+    <section className="min-h-[70svh] bg-obsidian pb-24 pt-28">
       <div className="page-frame">
         <PlainHeader eyebrow="Search" title="Find your piece." />
         <SearchView />

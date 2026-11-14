@@ -10,7 +10,7 @@ export function CollectionTabs({ active }: { active: string }) {
           key={t.slug}
           href={t.href}
           aria-current={active === t.slug ? "page" : undefined}
-          className={`glass shrink-0 rounded-full px-5 py-2.5 text-[0.66rem] font-bold uppercase tracking-[0.14em] transition-colors ${active === t.slug ? "border-champagne text-champagne" : "text-bone/80 hover:border-white/35 hover:text-bone"}`}
+          className={`glass shrink-0 px-4 py-2.5 text-[0.66rem] font-bold uppercase tracking-[0.14em] transition-colors ${active === t.slug ? "border-champagne text-champagne" : "text-bone/80 hover:border-white/35 hover:text-bone"}`}
         >
           {t.label}
           {"count" in t && t.count === 0 && <span className="ml-2 font-normal normal-case tracking-normal opacity-70">soon</span>}

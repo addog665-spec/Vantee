@@ -10,7 +10,7 @@ const links = [
 
 export function SiteFooter() {
   return (
-    <footer className="glass mx-3 mb-3 mt-6 rounded-[32px]">
+    <footer className="border-t border-white/12 bg-[#11110f]">
       <div className="page-frame grid gap-12 py-16 md:grid-cols-[1.2fr_1fr]">
         <div>
           <p className="flex items-center gap-3 font-serif text-2xl tracking-[0.22em]">

@@ -21,7 +21,7 @@ export default function StoryPage() {
         imageAlt="VÄNTÉ group campaign at the harbor"
       />
 
-      <section className="">
+      <section className="bg-obsidian">
         <div className="page-frame page-section grid gap-10 md:grid-cols-[14rem_1fr]">
           <p className="eyebrow">The name</p>
           <div data-reveal>
@@ -40,7 +40,7 @@ export default function StoryPage() {
         </div>
       </section>
 
-      <section className="on-light float-panel my-3 grid bg-ivory text-ink md:grid-cols-2">
+      <section className="on-light grid bg-ivory text-ink md:grid-cols-2">
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[85svh]">
           <Image src="/images/official/editorial/editorial-staircase-01.jpg" alt="VÄNTÉ campaign on a staircase" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
         </div>
@@ -60,7 +60,7 @@ export default function StoryPage() {
         </div>
       </section>
 
-      <section className="grain float-panel relative my-3 bg-[#10100f]">
+      <section className="grain relative overflow-hidden bg-[#10100f]">
         <Image src="/images/official/backgrounds/campaign-boat-02.jpg" alt="" fill sizes="100vw" className="object-cover opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-black/30" />
         <div className="page-frame page-section relative" data-reveal>
@@ -74,7 +74,7 @@ export default function StoryPage() {
         </div>
       </section>
 
-      <section className="">
+      <section className="bg-obsidian">
         <div className="page-frame page-section grid gap-10 md:grid-cols-[14rem_1fr]">
           <p className="eyebrow">The founder</p>
           <div data-reveal>
@@ -87,7 +87,7 @@ export default function StoryPage() {
         </div>
       </section>
 
-      <section className="on-light float-panel my-3 bg-bone text-ink">
+      <section className="on-light bg-bone text-ink">
         <div className="page-frame page-section flex flex-col items-center text-center" data-reveal>
           <EmblemIcon className="h-16 w-auto" />
           <h2 className="display mt-8 text-[clamp(3.2rem,9vw,8.5rem)] leading-none">Wear Your Advantage.</h2>

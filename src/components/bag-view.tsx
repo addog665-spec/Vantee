@@ -60,7 +60,7 @@ export function BagView() {
       <ul className="divide-y divide-white/12 border-y border-white/12">
         {lines.map(({ product, size, qty }) => (
           <li key={`${product.slug}-${size}`} className="grid grid-cols-[6rem_1fr] gap-5 py-6 sm:grid-cols-[8rem_1fr]">
-            <Link href={`/products/${product.slug}`} className="relative aspect-[4/5] overflow-hidden rounded-[16px] bg-graphite">
+            <Link href={`/products/${product.slug}`} className="relative aspect-[4/5] overflow-hidden bg-graphite">
               <Image src={product.images[0].src} alt={product.images[0].alt} fill sizes="8rem" className="object-cover" />
             </Link>
             <div className="flex min-w-0 flex-col">
@@ -72,7 +72,7 @@ export function BagView() {
                 <p className="text-sm">{formatPrice(product.price * qty)}</p>
               </div>
               <div className="mt-auto flex items-center justify-between pt-4">
-                <div className="glass flex items-center rounded-full px-1">
+                <div className="glass flex items-center">
                   <button type="button" aria-label={`Decrease quantity of ${product.name}`} onClick={() => bag.setQty(product.slug, size, qty - 1)} className="flex h-10 w-10 items-center justify-center hover:text-champagne">
                     <MinusIcon />
                   </button>
@@ -90,7 +90,7 @@ export function BagView() {
         ))}
       </ul>
 
-      <aside className="glass h-fit rounded-[26px] p-7 lg:sticky lg:top-24">
+      <aside className="h-fit border border-white/15 p-7 lg:sticky lg:top-24">
         <h2 className="font-serif text-3xl">Summary</h2>
         <dl className="mt-6 space-y-3 text-sm">
           <div className="flex justify-between"><dt className="text-bone/65">Subtotal</dt><dd>{formatPrice(subtotal)}</dd></div>

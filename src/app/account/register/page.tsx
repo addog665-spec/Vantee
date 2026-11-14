@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: "Create an account", robots: { index:
 export default async function RegisterPage() {
   if (await getSession()) redirect("/account");
   return (
-    <section className="min-h-[80svh] pb-24 pt-32">
+    <section className="min-h-[80svh] bg-obsidian pb-24 pt-32">
       <div className="page-frame max-w-xl">
         <PlainHeader eyebrow="Join VÄNTÉ" title="Wear your advantage." />
         <p className="mt-6 text-sm leading-6 text-bone/65">Create an account to be first to every drop.</p>

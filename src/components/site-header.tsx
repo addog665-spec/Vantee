@@ -47,7 +47,7 @@ export function SiteHeader() {
         Skip to content
       </a>
       <header className="fixed inset-x-0 top-0 z-40 px-3 pt-3 sm:px-5 sm:pt-4">
-        <div className="glass-deep mx-auto grid h-14 max-w-[1100px] grid-cols-[1fr_auto_1fr] items-center rounded-full px-2 sm:px-4">
+        <div className="mx-auto grid h-14 max-w-[1100px] grid-cols-[1fr_auto_1fr] items-center border border-white/12 bg-[#0d0d0c]/80 px-2 shadow-[0_18px_50px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:px-4">
           <div className="flex items-center">
             <button
               type="button"
@@ -114,7 +114,7 @@ export function SiteHeader() {
           role="dialog"
           aria-modal="true"
           aria-label="Site navigation"
-          className={`absolute inset-y-0 left-0 bg-[rgb(16_14_13/0.82)] glass-deep m-3 flex w-[min(88vw,420px)] flex-col rounded-[32px] px-6 pb-8 pt-5 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${open ? "translate-x-0" : "-translate-x-full"}`}
+          className={`absolute inset-y-0 left-0 flex w-[min(88vw,420px)] flex-col bg-obsidian px-6 pb-8 pt-5 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${open ? "translate-x-0" : "-translate-x-full"}`}
         >
           <div className="flex items-center justify-between">
             <span className="flex items-center gap-2.5 font-serif text-xl tracking-[0.22em]">

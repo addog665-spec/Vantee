@@ -19,7 +19,7 @@ export default function ContactPage() {
         image="/images/official/editorial/editorial-staircase-01.jpg"
         imageAlt="VÄNTÉ group campaign on the staircase"
       />
-      <section className="py-20">
+      <section className="bg-obsidian py-20">
         <div className="page-frame grid gap-14 md:grid-cols-[1fr_1.4fr]">
           <div className="space-y-8">
             <div>

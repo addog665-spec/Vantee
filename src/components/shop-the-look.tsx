@@ -6,19 +6,19 @@ export function ShopTheLook({ look, current }: { look: Look; current: string }) 
   const pieces = look.pieces.map(getProduct).filter((p): p is Product => Boolean(p));
 
   return (
-    <section className="py-20">
+    <section className="border-t border-white/12 bg-obsidian py-20">
       <div className="page-frame grid items-center gap-10 md:grid-cols-2 md:gap-16">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] bg-graphite shadow-[0_14px_38px_rgb(0_0_0/0.45)]" data-reveal>
+        <div className="relative aspect-[4/5] overflow-hidden bg-graphite" data-reveal>
           <Image src={look.image} alt={look.imageAlt} fill sizes="(min-width: 768px) 45vw, 100vw" className="object-cover" />
         </div>
-        <div className="glass rounded-[26px] p-6 sm:p-8" data-reveal>
+        <div data-reveal>
           <p className="eyebrow">Shop the look</p>
           <h2 className="display mt-4 text-5xl">{look.title}</h2>
           <ul className="mt-10 border-t border-white/12">
             {pieces.map((p) => (
               <li key={p.slug} className="border-b border-white/12">
                 <Link href={`/products/${p.slug}`} aria-current={p.slug === current ? "page" : undefined} className="group flex items-center gap-5 py-4">
-                  <div className="relative aspect-[4/5] w-20 shrink-0 overflow-hidden rounded-[14px] bg-graphite">
+                  <div className="relative aspect-[4/5] w-20 shrink-0 overflow-hidden bg-graphite">
                     <Image src={p.images[0].src} alt="" fill sizes="5rem" className="object-cover" />
                   </div>
                   <div className="min-w-0 flex-1">
