@@ -45,7 +45,7 @@ export default async function CollectionPage({ params }: PageProps<"/collections
         </div>
       </section>
       {collection.video && (
-        <section className="py-20 sm:py-28">
+        <section className="border-t border-white/10 py-20 sm:py-28">
           <div className="page-frame grid items-center gap-10 md:grid-cols-[1fr_minmax(0,24rem)] md:gap-16">
             <div data-reveal>
               <p className="eyebrow">In motion</p>

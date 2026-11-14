@@ -76,7 +76,7 @@ export default function Home() {
       </section>
 
       {/* Drops */}
-      <section className="pb-[clamp(4.5rem,9vw,8rem)] pt-[clamp(4rem,8vw,7rem)]">
+      <section className="border-t border-white/10 pb-[clamp(4.5rem,9vw,8rem)] pt-[clamp(4rem,8vw,7rem)]">
         <div className="page-frame">
           <div className="flex flex-wrap items-end justify-between gap-6" data-reveal>
             <div>
